@@ -93,7 +93,7 @@ class RoomSlider {
 			container.style.animation = 'fade-left 1s ease';
 			setTimeout(()=> {
 				this.renderSlide(container, this.props.slideIndex);
-			},1000);
+			},500);
 			setTimeout(()=> {
 				container.style.animation = 'none';
 			},1000);
@@ -106,7 +106,7 @@ class RoomSlider {
 			container.style.animation = 'fade-right 1s ease';
 			setTimeout(()=> {
 				this.renderSlide(container, this.props.slideIndex);
-			},1000);
+			},500);
 			setTimeout(()=> {
 				container.style.animation = 'none';
 			},1000);
