@@ -107,6 +107,8 @@ h1 {
 
 h2 {
 	font-size: 40px;
+	font-family: 'Museo Sans Cyrl 900', sans-serif;
+	line-height: 1.2em;
 }
 
 h3 {
@@ -171,6 +173,7 @@ button:active {
 	font-size: 28px;
 	display: block;
 	text-transform: none;
+	font-family: 'Museo Sans Cyrl 700', sans-serif;
 }
 
 .btn {
@@ -288,7 +291,7 @@ button:active {
 .header__title {
 	font-family: 'Museo Sans Cyrl 500', sans-serif;
 	text-transform: uppercase;
-	width: 650px;
+	width: 640px;
 }
 
 .header__title-small {
@@ -488,6 +491,94 @@ button:active {
 	height: auto;
 }
 /*Project section End*/
+
+/*Offers Start*/
+
+.offers {
+
+}
+
+.offers__title {
+	text-transform: uppercase;
+}
+
+.offers__cards {
+	justify-content: space-between;
+	margin-top: 70px;
+	text-align: center;
+	color: #fff;
+}
+
+.offers__card {
+	padding: 110px 40px;
+}
+
+.offers__card_nothing {
+	background: url(../img/price-1.jpg) no-repeat center center / cover;
+}
+
+.offers__card_econom {
+	background: url(../img/price-2.jpg) no-repeat center center / cover;
+}
+
+.offers__card_standart {
+	background: url(../img/price-3.jpg) no-repeat center center / cover;
+}
+
+.offers__card_lux {
+	background: url(../img/price-4.jpg) no-repeat center center / cover;
+}
+
+.offers__card-blur {
+	width: 270px;
+	padding: 35px 0 40px;
+}
+
+.offers__card-blur_nothing {
+	background: rgba(0, 0, 0, 0.2) url(../img/blur-1.png) no-repeat center center / cover;
+}
+
+.offers__card-blur_econom {
+	background: rgba(0, 0, 0, 0.2) url(../img/blur-2.png) no-repeat center center / cover;
+}
+
+.offers__card-blur_standart {
+	background: rgba(0, 0, 0, 0.2) url(../img/blur-3.png) no-repeat center center / cover;
+}
+
+.offers__card-blur_lux {
+	background: rgba(0, 0, 0, 0.2) url(../img/blur-4.png) no-repeat center center / cover;
+}
+
+.offers__name {
+	font-size: 28px;
+	text-transform: uppercase;
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.offers__name::after {
+	content: '';
+	display: block;
+	width: 69px;
+	height: 1px;
+	background: #e3e3e3;
+	margin: 20px auto;
+}
+
+.offers__pice {
+	font-size: 22px;
+	font-family: 'Museo Sans Cyrl 700', sans-serif;
+}
+
+.offers__pice span {
+	font-size: 40px;
+	text-transform: uppercase;
+	font-family: 'Museo Sans Cyrl 900', sans-serif;
+}
+
+/*Offers End*/
 
 /*Кeyframes Start*/
 @keyframes fade-right {
