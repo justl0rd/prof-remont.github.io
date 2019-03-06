@@ -90,12 +90,26 @@ class RoomSlider {
 			if (this.props.slideIndex < 0)
 				this.props.slideIndex = this.props.data.length - 1;
 			this.renderSlide(container, this.props.slideIndex);
+			container.style.animation = 'fade-left 1s ease';
+			setTimeout(()=> {
+				this.renderSlide(container, this.props.slideIndex);
+			},1000);
+			setTimeout(()=> {
+				container.style.animation = 'none';
+			},1000);
 		});
 		rightButton.addEventListener('click', e => {
 			this.props.slideIndex += 1;
 			if (this.props.slideIndex > this.props.data.length - 1)
 				this.props.slideIndex = 0;
-			this.renderSlide(container, this.props.slideIndex);
+
+			container.style.animation = 'fade-right 1s ease';
+			setTimeout(()=> {
+				this.renderSlide(container, this.props.slideIndex);
+			},1000);
+			setTimeout(()=> {
+				container.style.animation = 'none';
+			},1000);
 		});
 
 		window.addEventListener('click', this.modalHandler());
