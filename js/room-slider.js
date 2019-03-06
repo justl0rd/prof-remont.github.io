@@ -8,15 +8,15 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/odintsovo-img-1.jpg' // attribute value
+				src: 'img/projects/preview/odintsovo-img-1_sm.jpg' // attribute value
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/odintsovo-img-2.jpg'
+				src: 'img/projects/preview/odintsovo-img-3_sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/odintsovo-img-3.jpg'
+				src: 'img/projects/preview/odintsovo-img-2_sm.jpg'
 			}
 		},
 		link: '#'
@@ -28,15 +28,15 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/odintsovo-img-1.jpg' // attribute value
+				src: 'img/projects/preview/odintsovo-img-1_sm.jpg' // attribute value
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/odintsovo-img-2.jpg'
+				src: 'img/projects/preview/odintsovo-img-1_sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/odintsovo-img-3.jpg'
+				src: 'img/projects/preview/odintsovo-img-1_sm.jpg'
 			}
 		},
 		link: '#'
@@ -53,7 +53,6 @@ class RoomSlider {
 		}
 
 		this.renderSlide(container, this.props.slideIndex);
-		console.log(container);
 	}
 
 	renderSlide(container, idx) {
@@ -63,21 +62,23 @@ class RoomSlider {
 
 		const tileBlock = this.createElement('div', 'projects__tile'),
 			infoBlock = this.createElement('div', 'projects__info'),
+			projectsInfoBlock = this.createElement('div', 'projects__info_wrapper'),
 			titleInfo = this.createElement('h4', 'projects__title-info'),
 			locationInfo = this.createElement('p', 'projects__location'),
 			squareInfo = this.createElement('span', 'projects__square'),
 			smallImage = this.createElement('img', 'projects__image_small', [images.smallImage]),
-			largeImage = this.createElement('img', 'projects__image_small', [images.largeImage]),
+			largeImage = this.createElement('img', 'projects__image_large', [images.largeImage]),
 			priceCard = this.createElement('div', 'projects__price-card'),
-			priceImage = this.createElement('img', 'projects__image_small', [images.cardImage]),
+			priceImage = this.createElement('img', 'price-card__image', [images.cardImage]),
 			buttonlink = this.createElement('a', 'price-card__button', [{link}]);
 
 		titleInfo.innerText = title;
 		locationInfo.innerText = location;
 		squareInfo.innerText = square;
-
+		buttonlink.innerText = 'Узнать стоимость';
+		projectsInfoBlock.append(infoBlock, smallImage);
 		infoBlock.append(titleInfo, locationInfo, squareInfo);
-		tileBlock.append(infoBlock, smallImage, largeImage);
+		tileBlock.append(projectsInfoBlock, largeImage);
 		priceCard.append(priceImage, buttonlink);
 		container.append(tileBlock, priceCard);
 	}
