@@ -1,6 +1,6 @@
 'use strict'
 
-const dataToShow = [
+const roomDataToShow = [
 	{
 		title: 'Капитальный ремонт',
 		location: 'Одинцово',
@@ -63,12 +63,12 @@ const dataToShow = [
 	}
 ];
 
-const container = document.getElementById('room-slider');
+const roomSliderContainer = document.getElementById('room-slider');
 
 class RoomSlider {
-	constructor(container, dataToShow) {
+	constructor(container, roomDataToShow) {
 		this.props = {
-			data: [...dataToShow],
+			data: [...roomDataToShow],
 			slideIndex: 0
 		}
 
@@ -105,7 +105,7 @@ class RoomSlider {
 			},600);
 		});
 
-		window.addEventListener('click', this.modalHandler());
+		window.addEventListener('click', this.modalHandler(container));
 	}
 
 	renderSlide(container, idx) {
@@ -165,8 +165,7 @@ class RoomSlider {
 			body.append(modalWindow);
 	}
 
-	modalHandler() {
-
+	modalHandler(container) {
 		const modalWindow = this.createElement('div', 'projects__modal-window');
 
 		return (e) => {
@@ -181,4 +180,4 @@ class RoomSlider {
 	}
 }
 
-const roomSlider = new RoomSlider(container, dataToShow);
+const roomSlider = new RoomSlider(roomSliderContainer, roomDataToShow);
