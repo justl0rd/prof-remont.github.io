@@ -140,8 +140,16 @@ button:active {
 	box-shadow: none;
 }
 
+<<<<<<< HEAD
 .container {
 	width: 1435px;
 	margin: 0 auto;
 }
 /*Specification End*/
+=======
+/*Specification End*/
+
+.container {
+	width: 1434px;
+}
+>>>>>>> 0a1ef20d5475c64cabe35e3171d30e9c6753b613
