@@ -3,13 +3,9 @@
 /*-general-*/
 
 .projects {
-	padding: 135px 0;
+	padding: 125px 0;
 	color: #414141;
 	position: relative;
-}
-
-.projects__subtitle {
-	font-size: 28px;
 }
 
 .projects__title {
@@ -18,35 +14,44 @@
 	text-transform: uppercase;
 }
 
+.projects__slider-wrap {
+	position: relative;
+}
+
 .projects__room-slider {
 	display: flex;
 }
 
+
 .projects__button {
 	position: absolute;
-	top: 50%;
-	transform: translateY(100%);
-	width: 30px;
+	top: 55%;
 	height: 30px;
+	width: 16px;
+	cursor: pointer;
+	outline: none;
+    border: none;
 }
 
 .projects__left-button {
-	left: 10%;
+	left: -40px;
+	background: url(../img/icons.png) no-repeat right top;
 }
 
 .projects__right-button {
-	right: 10%;
+	right: -40px;
+	background: url(../img/icons.png) no-repeat right -21px top;
 }
 
 /*modal*/
 
 .projects__modal-window {
-	position: absolute;
-	top: 25%;
-	left: 25%;
-	width: 50%;
-	height: 50%;
-	transform: translateY(50%);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
 	/*background: gray;*/
 }
 

@@ -167,6 +167,12 @@ button:active {
 	display: flex;
 }
 
+.title-small {
+	font-size: 28px;
+	display: block;
+	text-transform: none;
+}
+
 .btn {
 	color: #fff;
 	background: #fe3a26;
