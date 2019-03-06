@@ -8,35 +8,64 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1_sm.jpg' // attribute value
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
+				'data-image-id': 1
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-3_sm.jpg'
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
+				'data-image-id': 3
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-2_sm.jpg'
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
+				'data-image-id': 2
 			}
 		},
 		link: '#'
 	},
 	{
-		title: 'Капитальный ремонт',
-		location: 'Одинцово',
-		square: '16 м',
+		title: 'Супер ремонт',
+		location: 'масква',
+		square: '100 м',
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1_sm.jpg' // attribute value
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
+				'data-image-id': 1
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-1_sm.jpg'
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
+				'data-image-id': 3
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-1_sm.jpg'
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
+				'data-image-id': 2
+			}
+		},
+		link: '#'
+	},
+	{
+		title: 'Просто ремонт',
+		location: 'Иваново',
+		square: '24 м',
+		images: {
+			smallImage: {
+				alt: '#', // attribute name
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
+				'data-image-id': 1
+			},
+			largeImage: {
+				alt: '#',
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
+				'data-image-id': 3
+			},
+			cardImage: {
+				alt: '#',
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
+				'data-image-id': 2
 			}
 		},
 		link: '#'
@@ -53,6 +82,23 @@ class RoomSlider {
 		}
 
 		this.renderSlide(container, this.props.slideIndex);
+		const leftButton = document.querySelector('.projects__left-button'),
+			rightButton = document.querySelector('.projects__right-button');
+
+		leftButton.addEventListener('click', e => {
+			this.props.slideIndex -= 1;
+			if (this.props.slideIndex < 0)
+				this.props.slideIndex = this.props.data.length - 1;
+			this.renderSlide(container, this.props.slideIndex);
+		});
+		rightButton.addEventListener('click', e => {
+			this.props.slideIndex += 1;
+			if (this.props.slideIndex > this.props.data.length - 1)
+				this.props.slideIndex = 0;
+			this.renderSlide(container, this.props.slideIndex);
+		});
+
+		window.addEventListener('click', this.modalHandler());
 	}
 
 	renderSlide(container, idx) {
@@ -95,6 +141,32 @@ class RoomSlider {
 			});
 		}
 		return element;
+	}
+
+	createModal(src, modalWindow) {
+		modalWindow.innerText = '';
+
+		const body = document.getElementsByTagName('body')[0],
+			imageSrc = src.replace('-sm', ''),
+			image = this.createElement('img', 'projects__modal-image', [{alt: '#',src: imageSrc}]);
+			modalWindow.append(image);
+			body.append(modalWindow);
+	}
+
+	modalHandler() {
+
+		const modalWindow = this.createElement('div', 'projects__modal-window');
+
+		return (e) => {
+			const {target} = e,
+				id = +target.dataset.imageId,
+				imagePath = target.src;
+			
+			if (container.contains(target) && target.tagName === 'IMG') {
+				this.createModal(imagePath, modalWindow);
+			}
+			else modalWindow.remove();
+		}
 	}
 }
 
