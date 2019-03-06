@@ -21,6 +21,7 @@
 	flex-basis: 1350px;
 	position: relative;
 	height: 730px;
+	transition: 1s;
 }
 
 .preview__back-image {
@@ -33,6 +34,7 @@
 	width: 100%;
 	background-position: center;
 	background-size: cover;
+	transition: 1s;
 }
 .preview__front-image {
 	top: 0;
@@ -44,4 +46,5 @@
 	position: absolute;
 	background-position: center;
 	background-size: cover;
+	transition: 1s;
 }
