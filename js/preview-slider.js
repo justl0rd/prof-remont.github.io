@@ -46,6 +46,8 @@ class PreviewSlider {
 		this.render(container);
 		this.galleryHandler();
 		this.clickHandler();
+
+		// const frontImage = document.querySelector('.preview__front-image');
 	}
 
 	render(container) {
@@ -75,11 +77,24 @@ class PreviewSlider {
 
 		backImage.style.background = `url(${data[prevSlide].path})`;
 		frontImage.style.background = `url(${data[slide].path})`;
-
-		container.append(backImage, frontImage);
 		
+		container.append(backImage, frontImage);
 		setTimeout(()=> {this.markerHandler()}, 0);
 	}
+
+	// animateRender(container, slide) {
+	// 	const frontImage = document.querySelector('.preview__front-image'),
+	// 		backImage = document.querySelector('.preview__gallery_checked');
+
+	// 	frontImage.style.animation = 'fade-out-left 1s ease';
+	// 	this.props.isAnimate = true;
+
+	// 	setTimeout(() => {
+	// 		this.render(container, slide);
+	// 		frontImage.style.animation = '';
+	// 		this.props.isAnimate = false;
+	// 	}, 900);
+	// }
 
 	galleryHandler() {
 		const galleryButtons = document.querySelector('.preview__arias'),

@@ -46,8 +46,8 @@
 	left: 0;
 	z-index: 1;
 	width: 100%;
-	background-position: center;
-	background-size: cover;
+	background-position: center !important;
+	background-size: cover !important;
 	transition: 1s;
 }
 .preview__front-image {
@@ -58,11 +58,20 @@
 	height: 730px;
 	width: 94%;
 	position: absolute;
-	background-position: center;
-	background-size: cover;
+	background-position: center !important;
+	background-size: cover !important;
 	transition: 1s;
 }
 
 .preview__gallery_checked {
 	border-bottom: 2px solid lightgreen;
+}
+
+@keyframes fade-out-left {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
 }
