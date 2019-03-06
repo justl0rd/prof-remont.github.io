@@ -1,0 +1,47 @@
+.preview {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.preview__arias {
+	flex-basis: 175px;
+}
+.preview__area {
+	display: block;
+	padding: 12.5px;
+	cursor: pointer;
+}
+
+.preview__images {
+	flex-basis: 1350px;
+	position: relative;
+	height: 730px;
+}
+
+.preview__back-image {
+	display: block;
+	height: 665px;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+}
+.preview__front-image {
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: block;
+	height: 730px;
+	width: 94%;
+	position: absolute;
+	background-position: center;
+	background-size: cover;
+}
