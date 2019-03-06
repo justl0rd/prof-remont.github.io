@@ -495,7 +495,7 @@ button:active {
 /*Offers Start*/
 
 .offers {
-
+	padding-bottom: 130px;
 }
 
 .offers__title {
@@ -556,6 +556,7 @@ button:active {
 	width: 200px;
 	margin: 0 auto;
 	text-align: center;
+	font-family: 'Museo Sans Cyrl 700', sans-serif;
 }
 
 .offers__name::after {
