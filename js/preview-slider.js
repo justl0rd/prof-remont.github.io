@@ -45,6 +45,7 @@ class PreviewSlider {
 
 		this.render(container);
 		this.galleryHandler();
+		this.clickHandler();
 	}
 
 	render(container) {
@@ -91,6 +92,10 @@ class PreviewSlider {
 				this.props.currentSlide = slideId;
 			}
 		});
+	}
+
+	clickHandler() {
+		const galleryContainer = document.querySelector('.preview__images');
 	}
 
 	createElement(tagName, className, attributes) {
