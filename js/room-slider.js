@@ -8,18 +8,15 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
-				'data-image-id': 1
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
-				'data-image-id': 3
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
-				'data-image-id': 2
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
 		link: '#'
@@ -31,18 +28,15 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
-				'data-image-id': 1
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
-				'data-image-id': 3
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
-				'data-image-id': 2
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
 		link: '#'
@@ -54,18 +48,15 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
-				'data-image-id': 1
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
-				'data-image-id': 3
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
-				'data-image-id': 2
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
 		link: '#'
@@ -132,7 +123,7 @@ class RoomSlider {
 			largeImage = this.createElement('img', 'projects__image_large', [images.largeImage]),
 			priceCard = this.createElement('div', 'projects__price-card'),
 			priceImage = this.createElement('img', 'price-card__image', [images.cardImage]),
-			buttonlink = this.createElement('a', 'price-card__button', [{link}]);
+			buttonlink = this.createElement('a', 'price-card__button btn', [{link}]);
 
 		titleInfo.innerText = title;
 		locationInfo.innerText = location;
@@ -146,8 +137,13 @@ class RoomSlider {
 	}
 
 	createElement(tagName, className, attributes) {
-		const element = document.createElement(tagName);
-		element.classList.add(className);
+		const element = document.createElement(tagName),
+			classList = className.split(' ');
+		if (classList.length >= 1) {
+			classList.forEach(cl => {
+				element.classList.add(cl);
+			});
+		}
 
 		if (attributes) {
 			attributes.map(attribute => {
@@ -175,7 +171,6 @@ class RoomSlider {
 
 		return (e) => {
 			const {target} = e,
-				id = +target.dataset.imageId,
 				imagePath = target.src;
 			
 			if (container.contains(target) && target.tagName === 'IMG') {
