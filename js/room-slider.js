@@ -8,15 +8,35 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: '../img/odintsovo-img-1.jpg' // attribute value
+				src: 'img/odintsovo-img-1.jpg' // attribute value
 			},
 			largeImage: {
 				alt: '#',
-				src: '../img/odintsovo-img-2.jpg'
+				src: 'img/odintsovo-img-2.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: '../img/odintsovo-img-3.jpg'
+				src: 'img/odintsovo-img-3.jpg'
+			}
+		},
+		link: '#'
+	},
+	{
+		title: 'Капитальный ремонт',
+		location: 'Одинцово',
+		square: '16 м',
+		images: {
+			smallImage: {
+				alt: '#', // attribute name
+				src: 'img/odintsovo-img-1.jpg' // attribute value
+			},
+			largeImage: {
+				alt: '#',
+				src: 'img/odintsovo-img-2.jpg'
+			},
+			cardImage: {
+				alt: '#',
+				src: 'img/odintsovo-img-3.jpg'
 			}
 		},
 		link: '#'
@@ -37,22 +57,26 @@ class RoomSlider {
 	}
 
 	renderSlide(container, idx) {
-		const {images, link} = this.props.data[idx];
+		const {images, link, location, square, title} = this.props.data[idx];
 
 		container.innerText = '';
 
 		const tileBlock = this.createElement('div', 'projects__tile'),
 			infoBlock = this.createElement('div', 'projects__info'),
 			titleInfo = this.createElement('h4', 'projects__title-info'),
-			location = this.createElement('p', 'projects__location'),
-			square = this.createElement('span', 'projects__square'),
+			locationInfo = this.createElement('p', 'projects__location'),
+			squareInfo = this.createElement('span', 'projects__square'),
 			smallImage = this.createElement('img', 'projects__image_small', [images.smallImage]),
 			largeImage = this.createElement('img', 'projects__image_small', [images.largeImage]),
 			priceCard = this.createElement('div', 'projects__price-card'),
 			priceImage = this.createElement('img', 'projects__image_small', [images.cardImage]),
 			buttonlink = this.createElement('a', 'price-card__button', [{link}]);
 
-		infoBlock.append(titleInfo, location, square);
+		titleInfo.innerText = title;
+		locationInfo.innerText = location;
+		squareInfo.innerText = square;
+
+		infoBlock.append(titleInfo, locationInfo, squareInfo);
 		tileBlock.append(infoBlock, smallImage, largeImage);
 		priceCard.append(priceImage, buttonlink);
 		container.append(tileBlock, priceCard);
