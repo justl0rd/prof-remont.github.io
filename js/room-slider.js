@@ -1,6 +1,6 @@
 'use strict'
 
-const dataToShow = [
+const roomDataToShow = [
 	{
 		title: 'Капитальный ремонт',
 		location: 'Одинцово',
@@ -8,18 +8,15 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
-				'data-image-id': 1
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
-				'data-image-id': 3
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
-				'data-image-id': 2
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
 		link: '#'
@@ -31,18 +28,15 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
-				'data-image-id': 1
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
-				'data-image-id': 3
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
-				'data-image-id': 2
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
 		link: '#'
@@ -54,30 +48,27 @@ const dataToShow = [
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg',// attribute value
-				'data-image-id': 1
+				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg',
-				'data-image-id': 3
+				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
 				alt: '#',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg',
-				'data-image-id': 2
+				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
 		link: '#'
 	}
 ];
 
-const container = document.getElementById('room-slider');
+const roomSliderContainer = document.getElementById('room-slider');
 
 class RoomSlider {
-	constructor(container, dataToShow) {
+	constructor(container, roomDataToShow) {
 		this.props = {
-			data: [...dataToShow],
+			data: [...roomDataToShow],
 			slideIndex: 0
 		}
 
@@ -94,6 +85,7 @@ class RoomSlider {
 			setTimeout(()=> {
 				this.renderSlide(container, this.props.slideIndex);
 			},200);
+			
 			setTimeout(()=> {
 				container.style.animation = 'none';
 			},600);
@@ -106,13 +98,14 @@ class RoomSlider {
 			container.style.animation = 'fade-right 0.5s ease';
 			setTimeout(()=> {
 				this.renderSlide(container, this.props.slideIndex);
+
 			},200);
 			setTimeout(()=> {
 				container.style.animation = 'none';
 			},600);
 		});
 
-		window.addEventListener('click', this.modalHandler());
+		window.addEventListener('click', this.modalHandler(container));
 	}
 
 	renderSlide(container, idx) {
@@ -130,7 +123,7 @@ class RoomSlider {
 			largeImage = this.createElement('img', 'projects__image_large', [images.largeImage]),
 			priceCard = this.createElement('div', 'projects__price-card'),
 			priceImage = this.createElement('img', 'price-card__image', [images.cardImage]),
-			buttonlink = this.createElement('a', 'price-card__button', [{link}]);
+			buttonlink = this.createElement('a', 'price-card__button btn', [{link}]);
 
 		titleInfo.innerText = title;
 		locationInfo.innerText = location;
@@ -144,8 +137,13 @@ class RoomSlider {
 	}
 
 	createElement(tagName, className, attributes) {
-		const element = document.createElement(tagName);
-		element.classList.add(className);
+		const element = document.createElement(tagName),
+			classList = className.split(' ');
+		if (classList.length >= 1) {
+			classList.forEach(cl => {
+				element.classList.add(cl);
+			});
+		}
 
 		if (attributes) {
 			attributes.map(attribute => {
@@ -167,13 +165,11 @@ class RoomSlider {
 			body.append(modalWindow);
 	}
 
-	modalHandler() {
-
+	modalHandler(container) {
 		const modalWindow = this.createElement('div', 'projects__modal-window');
 
 		return (e) => {
 			const {target} = e,
-				id = +target.dataset.imageId,
 				imagePath = target.src;
 			
 			if (container.contains(target) && target.tagName === 'IMG') {
@@ -184,4 +180,4 @@ class RoomSlider {
 	}
 }
 
-const roomSlider = new RoomSlider(container, dataToShow);
+const roomSlider = new RoomSlider(roomSliderContainer, roomDataToShow);
