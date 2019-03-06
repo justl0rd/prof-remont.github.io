@@ -62,3 +62,7 @@
 	background-size: cover;
 	transition: 1s;
 }
+
+.preview__gallery_checked {
+	border-bottom: 2px solid lightgreen;
+}

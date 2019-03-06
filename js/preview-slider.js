@@ -77,6 +77,8 @@ class PreviewSlider {
 		frontImage.style.background = `url(${data[slide].path})`;
 
 		container.append(backImage, frontImage);
+		
+		setTimeout(()=> {this.markerHandler()}, 0);
 	}
 
 	galleryHandler() {
@@ -85,7 +87,7 @@ class PreviewSlider {
 
 		galleryButtons.addEventListener('click', (e)=> {
 			const {target} = e,
-				slideId = target.dataset.imageId;
+				slideId = +target.dataset.imageId;
 				
 			if (target.tagName === 'SPAN') {
 				this.renderGallery(galleryContainer, slideId);
@@ -94,8 +96,30 @@ class PreviewSlider {
 		});
 	}
 
+	markerHandler() {
+		const {currentSlide} = this.props,
+			galleryButtons = document.querySelectorAll('.preview__area');
+		
+		galleryButtons[currentSlide].classList.add('preview__gallery_checked');
+
+		for (let button of galleryButtons) {
+			if (currentSlide !== +button.dataset.imageId && button.classList.contains('preview__gallery_checked')) {
+				button.classList.remove('preview__gallery_checked');
+			}
+		}
+	}
+
 	clickHandler() {
-		const galleryContainer = document.querySelector('.preview__images');
+		const galleryContainer = document.querySelector('.preview__images'),
+			button = document.querySelector('.preview__right-button');
+
+		button.addEventListener('click', () => {
+			this.props.currentSlide += 1;
+			if (this.props.currentSlide > this.props.data.length - 1)
+				this.props.currentSlide = 0;
+
+			this.renderGallery(galleryContainer, this.props.currentSlide);
+		});
 	}
 
 	createElement(tagName, className, attributes) {
