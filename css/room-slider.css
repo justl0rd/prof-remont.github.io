@@ -1,0 +1,178 @@
+/*--project section--*/
+
+/*-general-*/
+
+.projects {
+	padding: 135px 0;
+	color: #414141;
+	position: relative;
+}
+
+.projects__subtitle {
+	font-size: 28px;
+}
+
+.projects__title {
+	margin-bottom: 73px;
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+.projects__room-slider {
+	display: flex;
+}
+
+.projects__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(100%);
+	width: 30px;
+	height: 30px;
+}
+
+.projects__left-button {
+	left: 10%;
+}
+
+.projects__right-button {
+	right: 10%;
+}
+
+/*modal*/
+
+.projects__modal-window {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	transform: translateY(50%);
+	/*background: gray;*/
+}
+
+.projects__modal-image {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/*-about-block-*/
+.projects__tile {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-basis: 946px;
+	padding-right: 30px;
+}
+
+.projects__title-info {
+	font-size: 22px;
+}
+
+.projects__location {
+	margin: 40px 0 25px 0;
+	font-size: 20px;
+}
+
+.projects__square {
+	display: block;
+	font-size: 22px;
+}
+/**/
+.projects__info {
+	flex-basis: 545px;
+	background: #fafafa;
+	margin-right: 30px;
+	padding-top: 80px;
+	padding-left: 45px;
+}
+/**/
+
+.projects__image_small {
+	flex-basis: 383px;
+}
+.projects__image_large {
+	flex: 1 1 946px;
+	margin-top: 30px;
+}
+
+.projects__info_wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-basis: 946px;
+}
+
+/**/
+.projects__price-card {
+	flex-basis: 460px;
+	display: flex;
+	flex-direction: column;
+	/*justify-content: flex-end;*/
+	align-items: center;
+}
+
+.price-card__image {
+	margin-bottom: 25px;
+}
+.price-card__button {}
+
+.projects__image_small,
+.projects__image_large,
+.price-card__image {
+	/*display: block;*/
+	width: 100%;
+	height: auto;
+}
+
+
+@keyframes fade-right {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-150%);
+		opacity: 0;
+	}
+
+	60% {
+		transform: translateX(150%);
+		opacity: 0
+	}
+
+	70% {
+		transform: translateX(150%);
+		opacity: 1
+	}
+
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes fade-left {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(150%);
+		opacity: 0;
+	}
+
+	60% {
+		transform: translateX(-150%);
+		opacity: 0
+	}
+
+	70% {
+		transform: translateX(-150%);
+		opacity: 1
+	}
+
+
+	100% {
+		transform: translateX(0%);
+	}
+}
