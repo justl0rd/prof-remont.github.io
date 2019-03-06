@@ -140,8 +140,9 @@ button:active {
 	box-shadow: none;
 }
 
+.container {
+	width: 1435px;
+	margin: 0 auto;
+}
 /*Specification End*/
 
-.container {
-	width: 1434px;
-}
