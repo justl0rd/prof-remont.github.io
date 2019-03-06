@@ -500,7 +500,7 @@ button:active {
 /*Offers Start*/
 
 .offers {
-	padding-bottom: 130px;
+	padding-bottom: 120px;
 }
 
 .offers__title {
@@ -585,6 +585,97 @@ button:active {
 }
 
 /*Offers End*/
+/*Excellences Start*/
+
+.excellences {
+
+}
+
+.excellences__title {
+
+}
+
+.excellences__items {
+
+}
+
+.excellences__texts {
+	-ms-align-items: center;
+	align-items: center;
+	width: 100%;
+	margin-top: 45px;
+}
+
+.excellences__text {
+	font-size: 120px;
+	text-transform: uppercase;
+	margin-right: 20px;
+	padding: 50px 0;
+	background: url(../img/excelences.jpg) no-repeat left 55% center / 180%;
+	-webkit-background-clip:text;
+	background-clip:text;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
+	font-family: 'Museo Sans Cyrl 900', sans-serif;
+}
+
+.excellences__text-block {
+	font-size: 20px;
+	font-family: 'Museo Sans Cyrl 700', sans-serif;
+}
+
+.excellences__text-top {
+    margin-bottom: 8px;
+}
+
+.excellences__text-midle {
+    margin-bottom: 8px;
+}
+
+.excellences__text-bottom {
+    margin-bottom: 8px;
+}
+
+.excellences__skills {
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 9px 0 0 140px;
+}
+
+.excellences__skill {
+	text-transform: uppercase;
+	width: 180px;
+	font-size: 22px;
+	position: relative;
+	padding-left: 10px;
+}	
+
+.excellences__skill_experience:before,
+.excellences__skill_guarantee:before,
+.excellences__skill_design:before {
+	content: '';
+	position: absolute;
+	display: block;
+	position: absolute;
+	left: -50px;
+	top: 0;
+	width: 42px;
+	height: 42px;
+	margin-top: 4px;
+}
+
+.excellences__skill_experience:before {
+	background: url(../img/icons.png) no-repeat left -64px top;
+}
+
+.excellences__skill_guarantee:before {
+	background: url(../img/icons.png) no-repeat left -150px top 1px;
+}
+
+.excellences__skill_design:before {
+	background: url(../img/icons.png) no-repeat left -245px top 1px;
+}
+/*Excellences End*/
 
 /*Кeyframes Start*/
 @keyframes fade-right {
