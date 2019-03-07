@@ -6,9 +6,8 @@
 	<title>ПРОФ-РЕМОНТ</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="css/preview-slider.css">
 	<link rel="stylesheet" href="css/feedback.css">
-	<script src="feedback-slider.js" defer></script>
+	<script src="js/feedback-slider.js" defer></script>
 	<script src="js/main.js" defer></script>
 	<script src="js/room-slider.js" defer></script>
 	<script src="js/preview-slider.js" defer></script>
@@ -17,7 +16,7 @@
 	<header class="header" id="header">
 		<div class="container">
 			<nav class="header__navigation d-flex">
-				<a href="/" class="header__logo">
+				<a href="#" class="header__logo">
 					Проф-Ремонт
 				</a>
 				<div class="header__links d-flex">
@@ -42,7 +41,7 @@
 				<p class="header__text">
 					Вызов мастера для рассчёта стоимости - бесплатно!
 				</p>
-				<a href="#" class="header__btn btn">
+				<a href="#master" class="header__btn btn">
 					Заказать мастера
 				</a>
 				<p class="header__location">
@@ -157,8 +156,80 @@
 		</div>
 	</section>
 
-	<section class="feedback">
+	<section class="preview-wrap" id="preview-wrap">
 		<div class="container">
+			<h2 class="preview-wrap__title title-small">
+				Вдохновитесь нашими работами
+			</h2>
+		</div>
+		<div class="preview" id="preview">
+			<button class="preview__right-button"></button>
+		</div>
+	</section>
+
+	<section class="offer" id="offer">
+		<div class="container">
+			<h2 class="offer__title">
+			<span class="title-small">
+				Специальное предложение для новостроек
+			</span>
+				бесплатно
+			</h2>
+			<div class="offer__cards d-flex">
+				<div class="offer__card">
+					<h5 class="offer__name">
+						Профессиональная приемка и замеры вашей квартиры
+					</h5>
+					<p class="offer__text">
+						Услуга распространяется на клиентов,которые являются дольщиками, и собираються получать квартиру у застройщика.
+					</p>
+				</div>
+				<div class="offer__card offer__card_small">
+					<h5 class="offer__name">
+						Наши специалисты помогут пересчитать площадь квартиры
+					</h5>
+					<p class="offer__text">
+						Если присутствует увеличение площади и застройщик требует доплат,а также выявить нарушения допущеные при строительстве застройщиком.
+					</p>
+				</div>
+				<div class="offer__card">
+					<h5 class="offer__name offer__name_free">
+						Услуга специалиста бесплатно
+					</h5>
+					<p class="offer__text">
+						При вызове нашего специалиста на обьект для составления сметы,услуга профессионального приемщика бесплатно!
+					</p>
+				</div>
+				<div class="offer__card offer__card_small">
+					<h5 class="offer__name">
+						Наши специалисты помагают экономить ваши деньги
+					</h5>
+					<p class="offer__text">
+						В среднем профессиональные приемщики помогают сэкономить по 95000 рублей по Москве.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="master" id="master">
+		<div class="container">
+			<div class="master__wrap">
+				<h2 class="master__title">
+					Вызов мастера для расчёта стоимости - бесплатно
+				</h2>
+				<form class="small-form d-flex">
+					<input class="small-form__input small-form__input_name" type="text" name="name" placeholder="Введите имя" required>
+					<input class="small-form__input small-form__input_tel" type="text" name="tel" placeholder="Введите телефон" required>
+					<button class="btn small-form__btn">
+						Заказать
+					</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="feedback">
+		<div class="container feedback__container">
 			
 			<h2 class="feedback__title">
 			<span class="title-small">
@@ -166,12 +237,9 @@
 			</span>
 				Отзывы
 			</h2>
-			<div class="feedback__slider" id="feedback__slider">
-				<!-- // -->
-			</div>
+			<div class="feedback__wrapper" id="feedback__slider"></div>
 
 		</div>
 	</section>
-
 </body>
 </html>
