@@ -8,24 +8,24 @@ const feedbackData = [
 	},
 	{
 		id: 1,
-		name: 'Владимир "Доктор" Попов',
+		name: 'Владимир Попов',
 		text: `Мы делали ремонт в трехкомнатной квартире в ноябре прошлого года. Ремонт сделан качественно, все пожелания учтены! У нас было много вопросов по этапам и срокам, все терпеливо разъясняли и помогали ориентироваться в разнообразии отделочных материалов.`,
 		title: 'Ремонт для нас стал - приятными хлопотами',
 		date: '12.02.2019'
 	},
 	{
 		id: 2,
-		name: 'Марфа Ивановна',
-		text: `Внучку лень было делать ремонт и он его заказал, супостат! Но ремонт хороший`,
+		name: 'Ольга Иванова',
+		text: `Мы делали ремонт в трехкомнатной квартире в ноябре прошлого года. Ремонт сделан качественно, все пожелания учтены! У нас было много вопросов по этапам и срокам, все терпеливо разъясняли и помогали ориентироваться в разнообразии отделочных материалов.`,
 		title: 'Ремонт для нас стал - приятными хлопотами',
-		date: '02.01.2019'
+		date: '12.02.2019'
 	},
 	{
 		id: 3,
-		name: 'test',
-		text: `test_s_01_localTest_192.168.1.1_mmm_supra__pass_supra__login//supra__mm-test_s_01`,
-		title: 'test_b_01 ___justSupra',
-		date: '02.0221.2019'
+		name: 'Галина Колесник',
+		text: `Мы делали ремонт в трехкомнатной квартире в ноябре прошлого года. Ремонт сделан качественно, все пожелания учтены! У нас было много вопросов по этапам и срокам, все терпеливо разъясняли и помогали ориентироваться в разнообразии отделочных материалов.`,
+		title: 'Ремонт для нас стал - приятными хлопотами',
+		date: '12.12.2018'
 	}
 ];
 
@@ -39,7 +39,7 @@ class FeedbackSlider {
 		}
 
 		this.render(container);
-		this.dataUpdateHandler(7000);
+		// this.dataUpdateHandler(7000);
 		this.dataHandler();
 		this.markerHandler();
 	}
@@ -53,7 +53,7 @@ class FeedbackSlider {
 			pointersWrapper = this.createElement('div', 'feedback__pointers_wrapper'),
 			ul = this.createElement('ul', 'feedback__pointers'),
 			title = this.createElement('h3', 'feedback__name'),
-			date = this.createElement('ul', 'feedback__date'),
+			date = this.createElement('span', 'feedback__date'),
 			personName = this.createElement('h4', 'feedback__persons-name'),
 			personText = this.createElement('p', 'feedback__persons-comment');
 
@@ -152,19 +152,3 @@ class FeedbackSlider {
 }
 
 const feedbackSlider = new FeedbackSlider(feedBackContainer, feedbackData);
-
-
-// <div class="feedback__wrapper" id="feedback__slider">
-// 	<div class="feedback__reviews">
-// 		<div class="feedback__info"></div>
-// 		<div class="feedback__text"></div>
-// 	</div>
-// 	<div class="feedback__pointers">
-// 		<ul>
-// 			<li class="feedback__pointer"></li>
-// 			<li class="feedback__pointer"></li>
-// 			<li class="feedback__pointer"></li>
-// 			<li class="feedback__pointer"></li>
-// 		</ul>
-// 	</div>	
-// </div>

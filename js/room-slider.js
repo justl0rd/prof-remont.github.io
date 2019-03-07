@@ -4,7 +4,7 @@ const roomDataToShow = [
 	{
 		title: 'Капитальный ремонт',
 		location: 'Одинцово',
-		square: '16 м',
+		square: '16 м<sup>2</sup>',
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
@@ -24,7 +24,7 @@ const roomDataToShow = [
 	{
 		title: 'Супер ремонт',
 		location: 'Москва',
-		square: '100 м',
+		square: '100 м<sup>2</sup>',
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
@@ -44,7 +44,7 @@ const roomDataToShow = [
 	{
 		title: 'Просто ремонт',
 		location: 'Иваново',
-		square: '24 м',
+		square: '24 м<sup>2</sup>',
 		images: {
 			smallImage: {
 				alt: '#', // attribute name
@@ -127,7 +127,7 @@ class RoomSlider {
 
 		titleInfo.innerText = title;
 		locationInfo.innerText = location;
-		squareInfo.innerText = square;
+		squareInfo.innerHTML = square;
 		buttonlink.innerText = 'Узнать стоимость';
 		projectsInfoBlock.append(infoBlock, smallImage);
 		infoBlock.append(titleInfo, locationInfo, squareInfo);
