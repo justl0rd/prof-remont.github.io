@@ -71,30 +71,30 @@ class PreviewSlider {
 		container.innerText = '';
 
 		const {data} = this.props,
-			prevSlide = (slide > 0 ? slide - 1 : data.length - 1),
+			nextSlide = (slide + 1 >  data.length - 1 ? 0 : slide + 1),
 			backImage = this.createElement('div', 'preview__back-image'),
 			frontImage = this.createElement('div', 'preview__front-image');
 
-		backImage.style.background = `url(${data[prevSlide].path})`;
+		backImage.style.background = `url(${data[nextSlide].path})`;
 		frontImage.style.background = `url(${data[slide].path})`;
 		
 		container.append(backImage, frontImage);
 		setTimeout(()=> {this.markerHandler()}, 0);
 	}
 
-	// animateRender(container, slide) {
-	// 	const frontImage = document.querySelector('.preview__front-image'),
-	// 		backImage = document.querySelector('.preview__gallery_checked');
+	animateRender(container, slide) {
+		const frontImage = document.querySelector('.preview__front-image'),
+			backImage = document.querySelector('.preview__back-image');
 
-	// 	frontImage.style.animation = 'fade-out-left 1s ease';
-	// 	this.props.isAnimate = true;
+		frontImage.style.animation = 'fade-out-left 1.5s ease';
+		backImage.style.animation = 'unblur-scale 1.5s ease'
 
-	// 	setTimeout(() => {
-	// 		this.render(container, slide);
-	// 		frontImage.style.animation = '';
-	// 		this.props.isAnimate = false;
-	// 	}, 900);
-	// }
+		setTimeout(() => {
+			this.renderGallery(container, slide);
+			frontImage.style.animation = '';
+			backImage.style.animation = '';
+		}, 1000);
+	}
 
 	galleryHandler() {
 		const galleryButtons = document.querySelector('.preview__arias'),
@@ -105,7 +105,8 @@ class PreviewSlider {
 				slideId = +target.dataset.imageId;
 				
 			if (target.tagName === 'SPAN') {
-				this.renderGallery(galleryContainer, slideId);
+				this.animateRender(galleryContainer, slideId)
+				// this.renderGallery(galleryContainer, slideId);
 				this.props.currentSlide = slideId;
 			}
 		});
@@ -133,7 +134,8 @@ class PreviewSlider {
 			if (this.props.currentSlide > this.props.data.length - 1)
 				this.props.currentSlide = 0;
 
-			this.renderGallery(galleryContainer, this.props.currentSlide);
+			// this.renderGallery(galleryContainer, this.props.currentSlide);
+			this.animateRender(galleryContainer, this.props.currentSlide);
 		});
 	}
 

@@ -49,6 +49,7 @@
 	background-position: center !important;
 	background-size: cover !important;
 	transition: 1s;
+	filter: blur(3px);
 }
 .preview__front-image {
 	top: 0;
@@ -67,11 +68,69 @@
 	border-bottom: 2px solid lightgreen;
 }
 
+@keyframes unblur-scale {
+	0% {
+
+	}
+
+	30% {
+		filter: blur(1.4px);
+	}
+
+	55% {
+		filter: blur(0);
+		top: 0;
+		width: 94%;
+		height: 730px;
+	}
+
+	80% {
+		filter: blur(0);
+		top: 0;
+		width: 94%;
+		height: 730px;
+	}
+}
+
+
 @keyframes fade-out-left {
 	0% {
 		transform: translateX(0%);
 	}
+	50% {
+		transform: translateX(-150%);
+		opacity: 0;
+		filter: blur(2.4px);
+	}
+
+	55% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+
+	60% {
+		opacity: 0;
+	}
+
+	72% {
+		filter: blur(3px);
+		opacity: .5;
+	}
+
+	75% {
+		opacity: 1;
+		filter: blur(2.4px);
+		transform: translateX(0);
+		/*transition: .4s;*/
+		opacity: 1;
+	}
+
+	88% {
+		opacity: 1;
+	}
+
 	100% {
-		transform: translateX(-50%);
+		opacity: 1;
+		filter: blur(0);
 	}
 }
