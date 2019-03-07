@@ -449,13 +449,41 @@ button:active {
 .projects__location {
 	margin: 40px 0 25px 0;
 	font-size: 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.projects__location::before {
+	content: '';
+	display: block;
+	width: 13px;
+	height: 18px;
+	margin: 3px 5px 0 0;
+	background: url(../img/icons.png) no-repeat left top;
 }
 
 .projects__square {
-	display: block;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 	font-size: 22px;
+	position: relative;
 }
-/**/
+
+.projects__square::before {
+	content: '';
+	display: block;
+	width: 19px;
+	height: 19px;
+	margin-right: 5px;
+	background: url(../img/icons.png) no-repeat left -23px top;
+}
+
 .projects__info {
 	flex-basis: 545px;
 	background: #fafafa;
@@ -597,7 +625,7 @@ button:active {
 /*Excellences Start*/
 
 .excellences {
-	padding-bottom: 65px;
+	padding-bottom: 110px;
 }
 
 .excellences__title {
@@ -699,30 +727,48 @@ button:active {
 	position: relative;
 }
 
-.preview__title {
+.preview-wrap__title {
 	margin-bottom: 85px;
 }
 
 .preview__right-button {
-	left: 75%;
-    background: url(../img/icons.png) no-repeat right -21px top;
+	left: 74%;
+	background: url(../img/icons.png) no-repeat right -21px top;
 	position: absolute;
-    top: 55%;
-    height: 30px;
-    width: 16px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    z-index: 3;
+	top: 48%;
+	height: 30px;
+	width: 16px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	opacity: 0.47;
+	z-index: 3;
 }
 
 .preview__arias {
-	flex-basis: 175px;
+	flex-basis: 340px;
 }
 .preview__area {
 	display: block;
+	position: relative;
 	padding: 12.5px;
 	cursor: pointer;
+}
+
+.preview__area::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+	width: 0px;
+	height: 2px;
+	background: #b6f1f6;
+	transition: all 0.6s ease;
+}
+
+.preview__gallery_checked::after {
+	width: 46px;
 }
 
 .preview__images {
@@ -758,20 +804,15 @@ button:active {
 	transition: 1s;
 }
 
-.preview__gallery_checked {
-	border-bottom: 2px solid lightgreen;
-}
-
 /*Preview End*/
 /*Offer Start*/
 
 .offer {
-	padding-top: 130px;
-
+	padding: 128px 0 21px;
 }
 
 .offer__title {
-	margin-bottom: 120px;
+	margin-bottom: 110px;
 	text-transform: uppercase;
 }
 
@@ -785,6 +826,11 @@ button:active {
 	padding-left: 50px;
 	position: relative;
 	z-index: 2;
+}
+
+.offer__card_small {
+	width: 490px;
+	margin-right: 52px;
 }
 
 .offer__card::before {
@@ -802,12 +848,17 @@ button:active {
 
 .offer__name {
 	font-family: 'Museo Sans Cyrl 900', sans-serif;
-	margin: 0 0 25px;
+	margin: 0 0 10px;
+}
+
+.offer__name_free {
+	margin-bottom: 35px;
 }
 
 .offer__text {
 	font-size: 18px;
-	margin-bottom: 140px;
+	margin-bottom: 120px;
+	line-height: 1.3em;
 }
 
 /*Offer End*/
@@ -862,7 +913,7 @@ button:active {
 
 /*Master End*/
 
-/*Кeyframes Start*/
+/*Ðšeyframes Start*/
 @keyframes fade-right {
 	0% {
 		transform: translateX(0);
@@ -981,4 +1032,4 @@ button:active {
 		filter: blur(0);
 	}
 }
-/*Кeyframes End
+/*Ðšeyframes End
