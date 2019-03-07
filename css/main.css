@@ -188,12 +188,17 @@ button:active {
 	text-align: center;
 	text-transform: uppercase;
 	border: 2px solid transparent;
+	transition: all 0.6s ease;
 }
 
 .btn:hover {
 	border: 2px solid #fe3a26;
 	background: transparent;
 	color: #fe3a26;
+	cursor: pointer;
+}
+.btn:active {
+	box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.4);	
 }
 
 /*Specification End*/
@@ -486,7 +491,11 @@ button:active {
 .price-card__image {
 	margin-bottom: 25px;
 }
-.price-card__button {}
+.price-card__button {
+	width: 100%;
+	height: 89px;
+	line-height: 85px;
+}
 
 .projects__image_small,
 .projects__image_large,
@@ -588,7 +597,7 @@ button:active {
 /*Excellences Start*/
 
 .excellences {
-
+	padding-bottom: 65px;
 }
 
 .excellences__title {
@@ -677,6 +686,83 @@ button:active {
 }
 /*Excellences End*/
 
+/*Preview Start*/
+
+.preview {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.preview__title {
+	margin-bottom: 85px;
+}
+
+.preview__right-button {
+	left: 75%;
+    background: url(../img/icons.png) no-repeat right -21px top;
+	position: absolute;
+    top: 55%;
+    height: 30px;
+    width: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    z-index: 3;
+}
+
+.preview__arias {
+	flex-basis: 175px;
+}
+.preview__area {
+	display: block;
+	padding: 12.5px;
+	cursor: pointer;
+}
+
+.preview__images {
+	flex-basis: 1350px;
+	position: relative;
+	height: 730px;
+	transition: 1s;
+}
+
+.preview__back-image {
+	display: block;
+	height: 665px;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background-position: center !important;
+	background-size: cover !important;
+	transition: 1s;
+	filter: blur(3px);
+}
+.preview__front-image {
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: block;
+	height: 730px;
+	width: 94%;
+	position: absolute;
+	background-position: center !important;
+	background-size: cover !important;
+	transition: 1s;
+}
+
+.preview__gallery_checked {
+	border-bottom: 2px solid lightgreen;
+}
+
+/*Preview End*/
 /*Offer Start*/
 
 .offer {
@@ -686,6 +772,7 @@ button:active {
 
 .offer__title {
 	margin-bottom: 120px;
+	text-transform: uppercase;
 }
 
 .offer__cards {
@@ -704,45 +791,58 @@ button:active {
 	content: '';
 	display: block;
 	position: absolute;
-	width: 78px;
-	height: 73px;
+	width: 68px;
+	height: 63px;
 	background: #fff;
 	border: 5px solid #cdf5f9;
 	z-index: -1;
-	left: 15px;
-	top: -30px;
+	left: 25px;
+	top: -25px;
 }
 
 .offer__name {
 	font-family: 'Museo Sans Cyrl 900', sans-serif;
-	margin: 0 0 20px;
+	margin: 0 0 25px;
 }
 
 .offer__text {
 	font-size: 18px;
 	margin-bottom: 140px;
 }
+
 /*Offer End*/
 /*Master Start*/
 
 .master {
-
+	background: url(../img/form.jpg) no-repeat right center;
+	box-shadow: 0px 0px 57px 0px rgba(0, 0, 1, 0.1);
 }
 
 .master__wrap {
-
+ width: 100%;
+ padding: 160px 0 180px;
+ max-width: 845px;
+ background: #fff;
 }
 
 .master__title {
-
+	text-transform: uppercase;
+	font-family: 'Museo Sans Cyrl 900', sans-serif;
+	margin-bottom: 65px;
 }
 
 .small-form {
-
+	width: 760px;
+	justify-content: space-between;
 }
 
 .small-form__input {
-
+	width: 261px;
+	border: none;
+	border-bottom: 1px solid #a0a0a0;
+	font-family: 'Museo Sans Cyrl 700', sans-serif;
+	opacity: 0.5;
+	padding-top: 15px;
 }
 
 .small-form__input_name {
@@ -753,7 +853,12 @@ button:active {
 
 }
 
-.small-form__btn
+.small-form__btn {
+	width: 178px;
+	height: 45px;
+	line-height: 43px;
+	font-size: 17px;
+}
 
 /*Master End*/
 
@@ -807,6 +912,73 @@ button:active {
 
 	100% {
 		transform: translateX(0%);
+	}
+}
+
+@keyframes unblur-scale {
+	0% {
+
+	}
+
+	30% {
+		filter: blur(1.4px);
+	}
+
+	55% {
+		filter: blur(0);
+		top: 0;
+		width: 94%;
+		height: 730px;
+	}
+
+	80% {
+		filter: blur(0);
+		top: 0;
+		width: 94%;
+		height: 730px;
+	}
+}
+
+
+@keyframes fade-out-left {
+	0% {
+		transform: translateX(0%);
+	}
+	50% {
+		transform: translateX(-150%);
+		opacity: 0;
+		filter: blur(2.4px);
+	}
+
+	55% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+
+	60% {
+		opacity: 0;
+	}
+
+	72% {
+		filter: blur(3px);
+		opacity: .5;
+	}
+
+	75% {
+		opacity: 1;
+		filter: blur(2.4px);
+		transform: translateX(0);
+		/*transition: .4s;*/
+		opacity: 1;
+	}
+
+	88% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 1;
+		filter: blur(0);
 	}
 }
 /*Кeyframes End
