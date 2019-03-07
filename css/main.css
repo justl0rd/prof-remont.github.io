@@ -892,6 +892,8 @@ button:active {
 	border: none;
 	border-bottom: 1px solid #a0a0a0;
 	font-family: 'Museo Sans Cyrl 700', sans-serif;
+	letter-spacing: 0.06em;
+	font-size: 17px;
 	opacity: 0.5;
 	padding-top: 15px;
 }
@@ -912,8 +914,170 @@ button:active {
 }
 
 /*Master End*/
+/*Stages Start*/
 
-/*Ðšeyframes Start*/
+.stages {
+	padding-top: 150px;
+}
+
+.stages__title {
+	text-transform: uppercase;
+}
+
+.stages__items {
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 65px;
+}
+
+.stages__item {
+	width: 330px;
+	padding: 35px 0 25px 45px;
+	margin-bottom: 55px;
+	position: relative;
+	z-index: 3;
+}
+
+.stages__item_1::before,
+.stages__item_2::before,
+.stages__item_3::before,
+.stages__item_4::before,
+.stages__item_5::before,
+.stages__item_6::before {
+	position: absolute;
+	left: -5px;
+	top: 65px;
+	display: block;
+	font-size: 180px;
+	font-family: 'Museo Sans Cyrl 900', sans-serif;
+	color: #c4eff5;
+	z-index: -1;
+}
+
+.stages__item_1::before {
+	content: '1';
+}
+
+.stages__item_2::before {
+	content: '2';
+}
+
+.stages__item_3::before {
+	content: '3';
+}
+
+.stages__item_4::before {
+	content: '4';
+}
+
+.stages__item_5::before {
+	content: '5';
+}
+
+.stages__item_6::before {
+	content: '6';
+}
+
+.stages__name {
+	margin-bottom: 10px;
+	font-family: 'Museo Sans Cyrl 900', sans-serif;
+}
+
+.stages__text {
+	width: 290px;
+}
+
+/*Stages End*/
+/*Materials Start*/
+
+.materials {
+    padding: 45px 0;
+    background: url(../img/materials.png) no-repeat top 90% right 240px;
+}
+
+.materials__title {
+	text-transform: uppercase;
+}
+
+.materials__text {
+	width: 425px;
+	position: relative;
+	margin: 10px 0 89px 70px;
+}
+
+.materials__text::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -70px;
+	top: 10px;
+	width: 60px;
+	height: 1px;
+	background: #c0c0c0;
+}
+
+.materials__list {
+	width: 850px;
+	justify-content: space-between;
+}
+
+.materials__item {
+	text-transform: uppercase;
+}
+
+.materials__item_materials .materials__name{
+	width: 230px;
+}
+
+.materials__item_price .materials__name {
+	width: 105px;
+}
+
+.materials__item_choice .materials__name {
+	width: 250px;
+}
+
+.materials__item_materials::before,
+.materials__item_price::before,
+.materials__item_choice::before {
+	content: '';
+	display: block;
+	margin-right: 5px;
+}
+
+.materials__item_materials::before {
+	width: 40px;
+	height: 42px;
+	background: url(../img/icons.png) no-repeat left -325px top;
+}
+
+.materials__item_price::before {
+	width: 45px;
+	height: 34px;
+	margin-top: 3px;
+	background: url(../img/icons.png) no-repeat left -408px top;
+}
+
+.materials__item_choice::before {
+	width: 36px;
+	height: 36px;
+	margin-top: 2px;
+	background: url(../img/icons.png) no-repeat left -499px top;
+}
+
+.materials__price {
+	font-family: 'Museo Sans Cyrl 900', sans-serif;
+	font-size: 22px;
+	margin: 83px 0 30px;
+}
+
+/*Materials End*/
+
+/*Keyframes Start*/
 @keyframes fade-right {
 	0% {
 		transform: translateX(0);
@@ -1032,4 +1196,4 @@ button:active {
 		filter: blur(0);
 	}
 }
-/*Ðšeyframes End
+/*Keyframes End*/
