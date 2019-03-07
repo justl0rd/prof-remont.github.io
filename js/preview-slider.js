@@ -86,14 +86,18 @@ class PreviewSlider {
 		const frontImage = document.querySelector('.preview__front-image'),
 			backImage = document.querySelector('.preview__back-image');
 
-		frontImage.style.animation = 'fade-out-left 1.5s ease';
-		backImage.style.animation = 'unblur-scale 1.5s ease'
+		backImage.classList.remove('preview__back-image');
+		backImage.classList.add('preview__front-image');
 
+		frontImage.style.transform = 'translateX(-150%)';
+		frontImage.classList.remove('preview__front-image');
+		frontImage.classList.add('preview__back-image');
+
+			
 		setTimeout(() => {
+			// frontImage.style.animation = 'in-right 5s ease'; <== back image
 			this.renderGallery(container, slide);
-			frontImage.style.animation = '';
-			backImage.style.animation = '';
-		}, 1000);
+		}, 900);
 	}
 
 	galleryHandler() {
@@ -105,7 +109,7 @@ class PreviewSlider {
 				slideId = +target.dataset.imageId;
 				
 			if (target.tagName === 'SPAN') {
-				this.animateRender(galleryContainer, slideId)
+				// this.animateRender(galleryContainer, slideId)
 				// this.renderGallery(galleryContainer, slideId);
 				this.props.currentSlide = slideId;
 			}
