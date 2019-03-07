@@ -23,7 +23,7 @@ const roomDataToShow = [
 	},
 	{
 		title: 'Супер ремонт',
-		location: 'масква',
+		location: 'Москва',
 		square: '100 м',
 		images: {
 			smallImage: {
