@@ -1286,15 +1286,55 @@ button:active {
 }
 
 .contacts__call {
-	flex-basis: 180px;
-}
-.contacts__mail {
-	flex-basis: 270px;
-}
-.contacts__location {
-	flex-basis: 280px;
+	position: relative;
+	flex-basis: 205px;
+	padding-left: 25px;
 }
 
+.contacts__call::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 19px;
+	height: 19px;
+	background: url(../img/icons.png) 80% 0% no-repeat;
+	background-size: 5000%;
+}
+
+.contacts__mail {
+	position: relative;
+	padding-left: 25px;
+	flex-basis: 295px;
+}
+
+.contacts__mail::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 21px;
+	height: 15px;
+	background: url(../img/icons.png) 87.5% 0% no-repeat;
+	background-size: 3500%;
+}
+
+.contacts__location {
+	position: relative;
+	padding-left: 25px;
+	flex-basis: 305px;
+}
+
+.contacts__location::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 4px;
+	height: 18px;
+	width: 16px;
+	background: url(../img/icons.png) 92.7% 0% no-repeat;
+	background-size: 5100%;
+}
 
 .connection {
 	padding: 60px 65px 83px 60px;
@@ -1354,6 +1394,14 @@ button:active {
 }
 
 .footer__logo {
+	width: 34px;
+	height: 30px;
+	position: relative;
+	top: -8px;
+	margin-right: 10px;
+}
+
+.footer__logo-text {
 	font-size: 18px;
 	font-family: "Museo Sans Cyrl 700";
 	color: rgb(255, 255, 255);
