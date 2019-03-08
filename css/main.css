@@ -1209,13 +1209,19 @@ button:active {
 }
 
 .elements__title {
-	color: #fffefe;
 	font-size: 22px;
+	color: rgb(255, 254, 254);
+	font-family: "Museo Sans Cyrl 700";
 }
+
 .elements__list {
 	display: flex;
 	margin-top: 20px;
 	justify-content: flex-start;
+	font-size: 17px;
+	font-family: "Museo Sans Cyrl 300";
+	color: rgb(254, 254, 254);
+	text-transform: uppercase;
 }
 .elements__item {
 	text-transform: uppercase;
@@ -1244,6 +1250,10 @@ button:active {
 
 /*contacts start*/
 
+.contacts {
+	margin-top: 10px;
+}
+
 .contacts__container {
 	justify-content: space-between;
 	padding-bottom: 125px;
@@ -1264,16 +1274,46 @@ button:active {
 
 .contacts__data_title {
 	margin-bottom: 25px;
+	font-size: 22px;
+	font-family: "Museo Sans Cyrl 700";
+	color: rgba(65, 65, 65, 0.702);
+}
+
+.contacts__data_info {
+	font-size: 20px;
+	font-family: "Museo Sans Cyrl 900";
+	color: rgb(65, 65, 65);
+}
+
+.contacts__call {
+	flex-basis: 180px;
+}
+.contacts__mail {
+	flex-basis: 270px;
+}
+.contacts__location {
+	flex-basis: 280px;
 }
 
 
 .connection {
 	padding: 60px 65px 83px 60px;
+	background-color: rgb(255, 255, 255);
+  	box-shadow: 0px 0px 27px 0px rgba(0, 1, 5, 0.08);
+}
+
+.connection__title {
+	font-size: 28px;
+	color: rgb(65, 65, 65);
+	font-family: "Museo Sans Cyrl 900";
 }
 
 .connection__info {
 	margin-top: 20px;
 	margin-bottom: 45px;
+	font-size: 17px;
+	font-family: "Museo Sans Cyrl 300";
+	color: rgba(65, 65, 65, 0.322);
 }
 
 .connection__get {
@@ -1281,14 +1321,21 @@ button:active {
 	margin-bottom: 45px;
 	padding-bottom: 10px;
 	border: 0;
-	border-bottom: 1px solid lightgray;
+	border-bottom: 1px solid rgb(255, 255, 255);
 	width: 100%;
+	font-size: 17px;
+	font-family: "Museo Sans Cyrl 700";
+	color: rgba(65, 65, 65, 0.502);
+	box-shadow: 0px 1px 0px 0px rgba(0, 1, 5, 0.08);
 }
 
 .connection__button {
 	display: block;
 	width: 100%;
 	padding: 25px 0;
+	font-family: "Museo Sans Cyrl 700";
+	font-size: 17px;
+	color: #fff;
 }
 
 /*contacts end*/
@@ -1302,8 +1349,32 @@ button:active {
 }
 
 .footer__container {
-	justify-content: space-between;
+	justify-content: flex-start;
+	align-items: center;
 }
+
+.footer__logo {
+	font-size: 18px;
+	font-family: "Museo Sans Cyrl 700";
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	margin-right: 50px;
+}
+
+.footer__copyright {
+	font-size: 15px;
+	font-family: "Museo Sans Cyrl 300";
+	color: rgb(255, 255, 255);
+}
+
+.footer__number {
+	margin-left: auto;
+	font-size: 20px;
+	font-family: "Museo Sans Cyrl 900";
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+}
+
 
 /*footer end*/
 
