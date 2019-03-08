@@ -1,4 +1,4 @@
-Fonts Start*/
+/*Fonts Start*/
 
 @font-face {
 	font-family: 'Museo Sans Cyrl 900';
@@ -1152,6 +1152,146 @@ button:active {
 	outline: 5px solid lightblue;
 }
 /*Feedback End*/
+
+/*design start*/
+
+.design {
+	padding: 130px 0;
+	background: #fff;
+	position: relative;
+	box-sizing: border-box;
+}
+.design__title {}
+
+.design__wrapper {
+	display: flex;
+	z-index: 1;
+	position: relative;
+	/*margin-bottom: 130px;*/
+}
+.design__demo-section {
+	flex-basis: 860px;
+	margin-top: 75px;
+}
+
+.design__elements {
+	padding-top: 75px;
+	display: inline-block;
+}
+
+.design__elements:not(:first-child) {
+	margin-top: 25px;
+}
+
+.design__elements_materials {
+	padding-right: 194px;
+	background: url(../img/design/design-1.jpg) center center no-repeat;
+	background-size: cover;
+}
+.design__elements_style {
+	padding-right: 187px;
+	background: url(../img/design/design-2.jpg) center center no-repeat;
+	background-size: cover;
+}
+.design__elements_art {
+	padding-right: 150px;
+	background: url(../img/design/design-3.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+/*design elements*/
+.elements__container {
+	padding-left: 12.7%;
+	padding-top: 22px;
+	padding-right: 50px;
+	padding: 22px 50px 35px 244px; /*244px => 12.7%*/
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.elements__title {
+	color: #fffefe;
+	font-size: 22px;
+}
+.elements__list {
+	display: flex;
+	margin-top: 20px;
+	justify-content: flex-start;
+}
+.elements__item {
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #fffefe;
+	font-size: 16.9px;
+	cursor: pointer;
+}
+
+.elements__item:not(:first-child) {
+	margin-left: 35px;
+}
+
+.design__image {
+	position: absolute;
+	background: url(../img/couch.png) center center no-repeat;
+	background-size: contain;
+	right: 0;
+	top: 160px;
+	height: 750px;
+	width: 860px;
+	z-index: 0;
+}
+
+/*design end*/
+
+/*contacts start*/
+
+.contacts__container {
+	justify-content: space-between;
+}
+
+.contacts__content {
+	flex-basis: 880px;
+}
+
+.contacts__data {
+	justify-content: space-between;
+	margin-top: 105px;
+}
+
+.contacts__connection {
+	flex-basis: 460px;
+}
+
+.contacts__data_title {
+	margin-bottom: 25px;
+}
+
+
+.connection {
+	padding: 60px 65px 83px 60px;
+}
+
+.connection__info {
+	margin-top: 20px;
+	margin-bottom: 45px;
+}
+
+.connection__get {
+	display: block;
+	margin-bottom: 45px;
+	padding-bottom: 10px;
+	border: 0;
+	border-bottom: 1px solid lightgray;
+	width: 100%;
+}
+
+.connection__button {
+	display: block;
+	width: 100%;
+	padding: 25px 0;
+}
+
+/*contacts end*/
+
 
 /*Keyframes Start*/
 @keyframes fade-right {
