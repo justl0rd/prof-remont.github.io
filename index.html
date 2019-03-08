@@ -10,6 +10,7 @@
 	<script src="js/room-slider.js" defer></script>
 	<script src="js/preview-slider.js" defer></script>
 	<script src="js/feedback-slider.js" defer></script>
+	<script src="js/addActiveClass.js" defer></script>
 </head>
 <body>
 	<header class="header" id="header">
@@ -342,7 +343,7 @@
 		</div>
 	</section>
 
-	<section class="design">
+	<section class="design" id="design">
 		<div class="container">
 			<h2 class="design__title">
 				<span class="title-small">
@@ -357,9 +358,9 @@
 					<div class="elements__container">
 						<h3 class="elements__title">Натуральные материалы</h3>
 						<ul class="elements__list">
-							<li class="elements__item">Камень</li>
-							<li class="elements__item">Дерево</li>
-							<li class="elements__item">Мрамор</li>
+							<li class="elements__item elements__item_stone" data-element="stone-active">Камень</li>
+							<li class="elements__item elements__item_tree" data-element="tree-active">Дерево</li>
+							<li class="elements__item elements__item_marble" data-element="marble-active">Мрамор</li>
 						</ul>
 					</div>
 				</div>
@@ -367,8 +368,8 @@
 					<div class="elements__container">
 						<h3 class="elements__title">Экостиль</h3>
 						<ul class="elements__list">
-							<li class="elements__item">Фитостены</li>
-							<li class="elements__item">Цветы</li>
+							<li class="elements__item elements__item_phyto" data-element="phyto-active">Фитостены</li>
+							<li class="elements__item elements__item_flowers" data-element="flowers-active">Цветы</li>
 						</ul>
 					</div>
 				</div>
@@ -376,9 +377,9 @@
 					<div class="elements__container">
 						<h3 class="elements__title">Стиль арт-деко</h3>
 						<ul class="elements__list">
-							<li class="elements__item">Яркие цвета</li>
-							<li class="elements__item">Заниженная мебель</li>
-							<li class="elements__item">Шик</li>
+							<li class="elements__item elements__item_colors" data-element="colors-active">Яркие цвета</li>
+							<li class="elements__item elements__item_furniture" data-element="furniture-active">Заниженная мебель</li>
+							<li class="elements__item elements__item_chick" data-element="chick-active">Шик</li>
 						</ul>
 					</div>
 				</div>

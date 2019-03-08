@@ -1090,6 +1090,7 @@ button:active {
 	align-items: center;
 	max-width: 1035px;
 	margin-top: 55px;
+	height: 263px;
 }
 
 /*news*/
@@ -1097,6 +1098,7 @@ button:active {
 	padding: 35px 75px 45px 40px;
 	background: #fff;
 	flex-basis: 270px;
+	flex-shrink: 0;
 }
 
 .feedback__name {
@@ -1118,9 +1120,19 @@ button:active {
 }
 
 .feedback__persons-name {
+	position: relative;
 	font-size: 22px;
 	color: #414141;
 	margin-bottom: 35px;
+}
+
+.feedback__persons-name::after {
+	content: '';
+	position: absolute;
+	left: 3px;
+	bottom: -17px;
+	width: 70px;
+	border-bottom: 1px solid #bab0ab;
 }
 
 .feedback__persons-comment {
@@ -1141,6 +1153,7 @@ button:active {
 }
 
 .feedback__pointer {
+	position: relative;
 	background: #414141;
 	width: 10px;
 	height: 10px;
@@ -1148,8 +1161,17 @@ button:active {
 	cursor: pointer;
 }
 
+.feedback__pointer:not(:first-child)::before {
+	content: '';
+	position: absolute;
+	left: -50px;
+	top: 5px;
+	border-bottom: 1px solid #bab0ab;
+	width: 25px;
+}
+
 .feedback__gallery_checked {
-	outline: 5px solid lightblue;
+	outline: 7px solid #6fcdd4;
 }
 /*Feedback End*/
 
@@ -1426,6 +1448,24 @@ button:active {
 
 /*footer end*/
 
+
+/*acctive from design section*/
+
+.stone-active-lg {
+	background: blue;
+}
+.stone-active-sm {
+	background: gray;
+}
+
+.tree-active-lg {
+	background: orange;
+}
+.tree-active-sm {
+	background: green
+}
+
+/*etc...*/
 
 /*Keyframes Start*/
 @keyframes fade-right {
