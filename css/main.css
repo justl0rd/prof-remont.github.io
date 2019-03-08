@@ -1246,6 +1246,7 @@ button:active {
 
 .contacts__container {
 	justify-content: space-between;
+	padding-bottom: 125px;
 }
 
 .contacts__content {
@@ -1291,6 +1292,20 @@ button:active {
 }
 
 /*contacts end*/
+
+/*footer start*/
+
+.footer {
+	background: #414141;
+	color: #fff;
+	padding: 100px 0 80px 45px;
+}
+
+.footer__container {
+	justify-content: space-between;
+}
+
+/*footer end*/
 
 
 /*Keyframes Start*/
