@@ -533,6 +533,7 @@ button:active {
 /*Offers Start*/
 
 .offers {
+	position: relative;
 	padding-bottom: 120px;
 }
 
@@ -1139,6 +1140,7 @@ button:active {
 	align-items: center;
 	max-width: 1035px;
 	margin-top: 55px;
+	height: 263px;
 }
 
 /*news*/
@@ -1146,6 +1148,7 @@ button:active {
 	padding: 35px 75px 45px 40px;
 	background: #fff;
 	flex-basis: 270px;
+	flex-shrink: 0;
 }
 
 .feedback__name {
@@ -1174,7 +1177,10 @@ button:active {
 	margin-bottom: 35px;
 }
 
+/*<<<<<<< HEAD
 
+=======
+>>>>>>> dev-rkfr*/
 .feedback__persons-name::after {
 	content: '';
 	position: absolute;
@@ -1390,6 +1396,157 @@ button:active {
 	padding-left: 25px;
 }
 
+/*<<<<<<< HEAD
+=======*/
+/*design start*/
+
+.design {
+	padding: 130px 0;
+	background: #fff;
+	position: relative;
+	box-sizing: border-box;
+}
+.design__title {}
+
+.design__wrapper {
+	display: flex;
+	z-index: 1;
+	position: relative;
+	/*margin-bottom: 130px;*/
+}
+.design__demo-section {
+	flex-basis: 860px;
+	margin-top: 75px;
+}
+
+.design__elements {
+	padding-top: 75px;
+	display: inline-block;
+}
+
+.design__elements:not(:first-child) {
+	margin-top: 25px;
+}
+
+.design__elements_materials {
+	padding-right: 194px;
+	background: url(../img/design/design-1.jpg) center center no-repeat;
+	background-size: cover;
+}
+.design__elements_style {
+	padding-right: 187px;
+	background: url(../img/design/design-2.jpg) center center no-repeat;
+	background-size: cover;
+}
+.design__elements_art {
+	padding-right: 150px;
+	background: url(../img/design/design-3.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+/*design elements*/
+.elements__container {
+	padding-left: 12.7%;
+	padding-top: 22px;
+	padding-right: 50px;
+	padding: 22px 50px 35px 244px; /*244px => 12.7%*/
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.elements__title {
+	font-size: 22px;
+	color: rgb(255, 254, 254);
+	font-family: "Museo Sans Cyrl 700";
+}
+
+.elements__list {
+	display: flex;
+	margin-top: 20px;
+	justify-content: flex-start;
+	font-size: 17px;
+	font-family: "Museo Sans Cyrl 300";
+	color: rgb(254, 254, 254);
+	text-transform: uppercase;
+}
+.elements__item {
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: #fffefe;
+	font-size: 16.9px;
+	cursor: pointer;
+	position: relative;
+}
+
+.elements__item:not(:first-child) {
+	margin-left: 35px;
+}
+
+.elements__item::after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	bottom: -6px;
+	width: 30px;
+	border-bottom: 1px solid #fff;
+}
+
+.design__image {
+	position: absolute;
+	background: url(../img/couch.png) center center no-repeat;
+	background-size: contain;
+	right: 0;
+	top: 160px;
+	height: 750px;
+	width: 860px;
+	z-index: 0;
+}
+
+/*design end*/
+
+/*contacts start*/
+
+.contacts {
+	margin-top: 10px;
+}
+
+.contacts__container {
+	justify-content: space-between;
+	padding-bottom: 125px;
+}
+
+.contacts__content {
+	flex-basis: 880px;
+}
+
+.contacts__data {
+	justify-content: space-between;
+	margin-top: 105px;
+}
+
+.contacts__connection {
+	flex-basis: 460px;
+}
+
+.contacts__data_title {
+	margin-bottom: 25px;
+	font-size: 22px;
+	font-family: "Museo Sans Cyrl 700";
+	color: rgba(65, 65, 65, 0.702);
+}
+
+.contacts__data_info {
+	font-size: 20px;
+	font-family: "Museo Sans Cyrl 900";
+	color: rgb(65, 65, 65);
+}
+
+.contacts__call {
+	position: relative;
+	flex-basis: 205px;
+	padding-left: 25px;
+}
+
+/*>>>>>>> dev-rkfr*/
 .contacts__call::before {
 	content: '';
 	position: absolute;
@@ -1477,8 +1634,14 @@ button:active {
 	color: #fff;
 }
 
+/*<<<<<<< HEAD*/
 /*Contacts End*/
 /*Footer Start*/
+/*=======*/
+/*contacts end*/
+
+/*footer start*/
+/*>>>>>>> dev-rkfr*/
 
 .footer {
 	background: #414141;
@@ -1502,7 +1665,11 @@ button:active {
 .footer__logo-text {
 	font-size: 18px;
 	font-family: "Museo Sans Cyrl 700";
-	color: #c6c6c6;
+/*<<<<<<< HEAD*/
+	/*color: #c6c6c6;*/
+/*=======*/
+	color: rgb(255, 255, 255);
+/*>>>>>>> dev-rkfr*/
 	text-transform: uppercase;
 	margin-right: 50px;
 }
@@ -1510,6 +1677,7 @@ button:active {
 .footer__copyright {
 	font-size: 15px;
 	font-family: "Museo Sans Cyrl 300";
+/*<<<<<<< HEAD*/
 	color: #fff;
 }
 
@@ -1553,6 +1721,121 @@ button:active {
 }
 
 /*Footer End*/
+/*=======*/
+	/*color: rgb(255, 255, 255);*/
+/*}*/
+
+.footer__number {
+	margin-left: auto;
+	font-size: 20px;
+	font-family: "Museo Sans Cyrl 900";
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+}
+
+
+/*footer end*/
+
+
+/*acctive from design section*/
+
+.stone-active-lg {
+	background: blue;
+}
+.stone-active-sm {
+	background: gray;
+}
+
+.tree-active-lg {
+	background: orange;
+}
+.tree-active-sm {
+	background: green
+}
+
+/*etc...*/
+
+
+/*modal jobs-sec*/
+
+.job-types {
+	display: none;
+	padding: 77px 70px 135px 60px;
+	max-width: 600px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 27px 0px rgba(0, 1, 5, 0.08);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+}
+
+.job-types__discover {
+	margin-top: 80px;
+	margin-bottom: 35px;
+}
+
+.job-types__title {
+	margin-left: 55px;
+}
+
+.job-types__value {
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	top: 80px;
+	left: 60px;
+	font-size: 78px;
+	font-family: "Museo Sans Cyrl 900";
+	color: rgba(67, 67, 67, 0.349);
+}
+
+.job-types__get-data {
+	justify-content: space-between;
+}
+
+.job-types__get-data label {
+	display: block;
+	width: 100%;
+}
+
+.job-types__get-number {
+	padding: 15px 20px;
+	border: none;
+	font-size: 17px;
+	border-bottom: 1px solid rgb(102, 102, 102);
+	color: rgba(65, 65, 65, 0.502);
+	font-family: "Museo Sans Cyrl 700";
+}
+
+.job-types__button {
+	border-width: 1px;
+	border-color: rgb(102, 102, 102);
+	border-style: solid;
+	padding: 15px 20px;
+	background: #fff;
+	text-transform: uppercase;
+	font-size: 17px;
+	color: rgb(102, 102, 102);
+	font-family: "Museo Sans Cyrl 700";
+	margin-left: 15px;
+	display: block;
+	cursor: pointer;
+	transition: .6s;
+}
+
+.job-types_open {
+	display: block;
+}
+
+.job-types__button:hover {
+	background: #fe3a26;
+	color: #fff;
+	border-color: #fff;
+}
+
+/*>>>>>>> dev-rkfr*/
 /*Keyframes Start*/
 @keyframes fade-right {
 	0% {
@@ -1779,4 +2062,4 @@ button:active {
 	
 }
 
-/* Media Queries End*/
+/* Media Queries End
