@@ -1323,3 +1323,91 @@ button:active {
 	}
 }
 /*Keyframes End*/
+
+/* Media Queries  Start*/
+
+/* 1500 - 1700 px */
+@media screen and (max-width: 1700px) {
+	.header {
+		background: url(../img/header-img.jpg) no-repeat right bottom / 850px;
+	}
+}
+/* 1200 - 1500 px */
+@media screen and (max-width: 1500px) {
+	.container {
+		max-width: 1170px;
+	}
+	.offers__cards {
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.offers__card {
+		margin: 0 50px 50px;
+	}
+	.header {
+		background: url(../img/header-img.jpg) no-repeat right bottom / 650px;
+	}
+	.projects__price-card {
+		padding-left: 30px;
+	}
+	.projects__tile {
+	    flex-basis: 850px;
+	}
+	.preview__front-image {
+	    height: 640px;
+    	width: 88%;
+	}
+	.preview__back-image {
+	    width: 92%;
+	    height: 575px;
+	}
+	.preview__right-button {
+		left: 78%;
+	}
+	.preview__arias {
+    	flex-basis: 280px;
+	}
+	.master {
+	    background: url(../img/form.jpg) no-repeat right -200px center;
+	}
+	.materials {
+        background: url(../img/materials.png) no-repeat top 80% right 20px / 350px;
+	}
+	.feedback__container::before,
+	.feedback__container::after {
+		width: 1050px;
+	}
+	.feedback__text {
+		margin-right: auto;
+		padding-left: 10px;
+	}
+	.feedback__persons-comment {
+	    width: 600px;
+	}
+}
+
+/* 992 - 1200 px */
+@media screen and (max-width: 1200px) {
+
+}
+
+/* 768 - 992 px */
+@media screen and (max-width: 992px) {
+	
+}
+
+/* 576 - 768 px */
+@media screen and (max-width: 768px) {
+	
+}
+
+/* 320 - 576 px */
+@media screen and (max-width: 576px) {
+	
+}
+
+/* Media Queries End*/
