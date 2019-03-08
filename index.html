@@ -10,6 +10,7 @@
 	<script src="js/room-slider.js" defer></script>
 	<script src="js/preview-slider.js" defer></script>
 	<script src="js/feedback-slider.js" defer></script>
+	<script src="js/addActiveClass.js" defer></script>
 </head>
 <body>
 	<header class="header" id="header">
@@ -328,7 +329,6 @@
 				</form>
 		</div>
 	</section>
-
 	<section class="feedback">
 		<div class="container feedback__container">
 			
@@ -341,5 +341,119 @@
 			<div class="feedback__wrapper" id="feedback__slider"></div>
 		</div>
 	</section>
+	<section class="design" id="design">
+		<div class="container">
+			<h2 class="design__title">
+				<span class="title-small">
+					Тренды на рынке ремонта
+				</span>
+					Дизайн
+			</h2>
+		</div>
+		<div class="design__wrapper">
+			<div class="design__demo-section">
+				<div class="design__elements design__elements_materials">
+					<div class="elements__container">
+						<h3 class="elements__title">Натуральные материалы</h3>
+						<ul class="elements__list">
+							<li class="elements__item elements__item_stone" data-element="stone-active">Камень</li>
+							<li class="elements__item elements__item_tree" data-element="tree-active">Дерево</li>
+							<li class="elements__item elements__item_marble" data-element="marble-active">Мрамор</li>
+						</ul>
+					</div>
+				</div>
+				<div class="design__elements design__elements_style">
+					<div class="elements__container">
+						<h3 class="elements__title">Экостиль</h3>
+						<ul class="elements__list">
+							<li class="elements__item elements__item_phyto" data-element="phyto-active">Фитостены</li>
+							<li class="elements__item elements__item_flowers" data-element="flowers-active">Цветы</li>
+						</ul>
+					</div>
+				</div>
+				<div class="design__elements design__elements_art">
+					<div class="elements__container">
+						<h3 class="elements__title">Стиль арт-деко</h3>
+						<ul class="elements__list">
+							<li class="elements__item elements__item_colors" data-element="colors-active">Яркие цвета</li>
+							<li class="elements__item elements__item_furniture" data-element="furniture-active">Заниженная мебель</li>
+							<li class="elements__item elements__item_chick" data-element="chick-active">Шик</li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div class="design__image"></div>
+	</section>
+	<section class="contacts">
+		<div class="container contacts__container d-flex">
+			<div class="contacts__content">
+				<h2 class="contacts__title">
+				<span class="title-small">
+					Свяжитесь с нами
+				</span>
+					Контакты
+				</h2>
+				<div class="contacts__data d-flex">
+					<div class="contacts__call">
+						<h5 class="contacts__data_title">
+							Позвоните нам
+						</h5>
+						<p class="contacts__data_info">
+							+79205420316
+						</p>
+					</div>
+					<div class="contacts__mail">
+						<h5 class="contacts__data_title">
+							Напишите нам
+						</h5>
+						<p class="contacts__data_info">
+							Sashaka7096@gmail.com
+						</p>
+					</div>
+					<div class="contacts__location">
+						<h5 class="contacts__data_title">
+							Приезжайте к нам
+						</h5>
+						<p class="contacts__data_info">
+							г. Москва ул. Пятницкая,
+							д. 18, стр. 4
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contacts__connection">
+				<form action="#" class="connection">
+					<h4 class="connection__title">Заполните форму</h4>
+					<p class="connection__info">Для получеия подробной информации</p>
+					<label>
+						<input type="text" placeholder="Введите имя" class="connection__get connection__get_name">
+					</label>
+					<label>
+						<input type="text" placeholder="Введите телефон" class="connection__get connection__get_number">
+					</label>
+					<label>
+						<input type="text" placeholder="Введите E-mail" class="connection__get connection__get_e-mail">
+					</label>
+					<label>
+						<input type="submit" class="connection__button btn" value="Заказать расчёт">
+					</label>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container footer__container d-flex">
+			<img src="img/logo.png" alt="Company Logo" class="footer__logo">
+			<div class="footer__logo-text">Ремонт</div>
+			<div class="footer__copyright">&copy; Все права защищены</div>
+			<a href="tel:+84956468240" class="footer__tel">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32">
+				<path d="M22 20c-2 2-2 4-4 4s-4-2-6-4-4-4-4-6 2-2 4-4-4-8-6-8-6 6-6 6c0 4 4.109 12.109 8 16s12 8 16 8c0 0 6-4 6-6s-6-8-8-6z"></path>
+				</svg>
+				+84956468240
+			</a>
+		</div>
+	</footer>
 </body>
 </html>
