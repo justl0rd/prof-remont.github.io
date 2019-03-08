@@ -1319,7 +1319,7 @@ button:active {
 
 .design__image {
 	position: absolute;
-	background: url(../img/couch.png) right center no-repeat / cover;
+	background: url(../img/couch.png) right center no-repeat;
 	background-size: contain;
 	right: 0;
 	top: 160px;
@@ -1682,7 +1682,7 @@ button:active {
 		background: url(../img/header-img.jpg) no-repeat right bottom / 850px;
 	}
 	.design__image {
-		background: url(../img/couch.png) right -360px center no-repeat / cover;
+		background: url(../img/couch.png) right -360px center no-repeat;
 	}
 }
 /* 1200 - 1500 px */
@@ -1742,7 +1742,7 @@ button:active {
 	    width: 600px;
 	}
 	.design__image {
-		background: url(../img/couch.png) right -650px center no-repeat / cover;
+		background: url(../img/couch.png) right -650px center no-repeat;
 	}
 	.contacts__mail,
 	.contacts__call,
