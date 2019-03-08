@@ -533,6 +533,7 @@ button:active {
 /*Offers Start*/
 
 .offers {
+	position: relative;
 	padding-bottom: 120px;
 }
 
@@ -1251,10 +1252,20 @@ button:active {
 	color: #fffefe;
 	font-size: 16.9px;
 	cursor: pointer;
+	position: relative;
 }
 
 .elements__item:not(:first-child) {
 	margin-left: 35px;
+}
+
+.elements__item::after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	bottom: -6px;
+	width: 30px;
+	border-bottom: 1px solid #fff;
 }
 
 .design__image {
@@ -1466,6 +1477,86 @@ button:active {
 }
 
 /*etc...*/
+
+
+/*modal jobs-sec*/
+
+.job-types {
+	display: none;
+	padding: 77px 70px 135px 60px;
+	max-width: 600px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 0px 27px 0px rgba(0, 1, 5, 0.08);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 4;
+}
+
+.job-types__discover {
+	margin-top: 80px;
+	margin-bottom: 35px;
+}
+
+.job-types__title {
+	margin-left: 55px;
+}
+
+.job-types__value {
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	top: 80px;
+	left: 60px;
+	font-size: 78px;
+	font-family: "Museo Sans Cyrl 900";
+	color: rgba(67, 67, 67, 0.349);
+}
+
+.job-types__get-data {
+	justify-content: space-between;
+}
+
+.job-types__get-data label {
+	display: block;
+	width: 100%;
+}
+
+.job-types__get-number {
+	padding: 15px 20px;
+	border: none;
+	font-size: 17px;
+	border-bottom: 1px solid rgb(102, 102, 102);
+	color: rgba(65, 65, 65, 0.502);
+	font-family: "Museo Sans Cyrl 700";
+}
+
+.job-types__button {
+	border-width: 1px;
+	border-color: rgb(102, 102, 102);
+	border-style: solid;
+	padding: 15px 20px;
+	background: #fff;
+	text-transform: uppercase;
+	font-size: 17px;
+	color: rgb(102, 102, 102);
+	font-family: "Museo Sans Cyrl 700";
+	margin-left: 15px;
+	display: block;
+	cursor: pointer;
+	transition: .6s;
+}
+
+.job-types_open {
+	display: block;
+}
+
+.job-types__button:hover {
+	background: #fe3a26;
+	color: #fff;
+	border-color: #fff;
+}
 
 /*Keyframes Start*/
 @keyframes fade-right {

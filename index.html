@@ -11,6 +11,7 @@
 	<script src="js/preview-slider.js" defer></script>
 	<script src="js/feedback-slider.js" defer></script>
 	<script src="js/addActiveClass.js" defer></script>
+	<script src="js/modal-buy.js" defer></script>
 </head>
 <body>
 	<header class="header" id="header">
@@ -76,7 +77,7 @@
 				Мы делаем
 			</h2>
 			<div class="offers__cards d-flex">
-				<div class="offers__card offers__card_nothing">
+				<div class="offers__card offers__card_nothing" data-jobs-types="18">
 					<div class="offers__card-blur offers__card-blur_nothing">
 						<p class="offers__name">
 							Черновые работы
@@ -86,7 +87,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="offers__card offers__card_econom">
+				<div class="offers__card offers__card_econom" data-jobs-types="27">
 					<div class="offers__card-blur offers__card-blur_econom">
 						<p class="offers__name">
 							Эконом ремонт
@@ -96,7 +97,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="offers__card offers__card_standart">
+				<div class="offers__card offers__card_standart" data-jobs-types="56">
 					<div class="offers__card-blur offers__card-blur_standart">
 						<p class="offers__name">
 							Стандарт ремонт
@@ -106,7 +107,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="offers__card offers__card_lux">
+				<div class="offers__card offers__card_lux" data-jobs-types="60">
 					<div class="offers__card-blur offers__card-blur_lux">
 						<p class="offers__name">
 							Люкс ремонт
@@ -117,6 +118,19 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="job-types">
+			<h5 class="job-types__title">Видов работ</h5>
+			<p class="job-types__discover">Узнать детально у специалиста</p>
+			<div class="job-types__value"></div>
+			<form action="#" class="job-types__get-data d-flex">
+				<label>
+					<input type="text" placeholder="Введите телефон" class="job-types__get-number">
+				</label>
+				<label>
+					<input type="button" value="Заказать звонок" class="job-types__button">
+				</label>
+			</form>
 		</div>
 	</section>
 	<section class="excellences" id="excellences">
