@@ -11,6 +11,7 @@
 	<script src="js/preview-slider.js" defer></script>
 	<script src="js/feedback-slider.js" defer></script>
 	<script src="js/addActiveClass.js" defer></script>
+	<script src="js/modal-buy.js" defer></script>
 </head>
 <body>
 	<header class="header" id="header">
@@ -118,6 +119,20 @@
 				</div>
 			</div>
 		</div>
+		<div class="job-types">
+			<h5 class="job-types__title">Видов работ</h5>
+			<p class="job-types__discover">Узнать детально у специалиста</p>
+			<div class="job-types__value"></div>
+			<form action="success.php" class="job-types__get-data d-flex js-form" data-id="popupResult">
+				<input name="id-form" type="text" value=" Какие ремонтные работы МЫ ДЕЛАЕМ" hidden>
+				<label class="form__label">
+					<input type="text" name="tel" placeholder="Введите телефон" class="job-types__get-number">
+				</label>
+					<button class="job-types__button" data-submit>
+						Заказать звонок
+					</button>
+			</form>
+		</div>
 	</section>
 	<section class="excellences" id="excellences">
 		<div class="container">
@@ -217,12 +232,14 @@
 				<h2 class="master__title">
 					Вызов мастера для расчёта стоимости - бесплатно
 				</h2>
-				<form class="small-form d-flex">
+				<form action="success.php" class="small-form d-flex js-form" data-id="popupResult">
+					<input name="id-form" type="text" value=" Вызов мастера для расчёта стоимости" hidden>
 					<input class="small-form__input small-form__input_name" type="text" name="name" placeholder="Введите имя" required>
 					<input class="small-form__input small-form__input_tel" type="text" name="tel" placeholder="Введите телефон" required>
-					<button class="btn small-form__btn">
+					<button class="btn small-form__btn" data-submit>
 						Заказать
 					</button>
+				</form>
 				</form>
 			</div>
 		</div>
@@ -320,13 +337,14 @@
 			<p class="materials__price">
 				Узнать точные расценки
 			</p>
-			<form class="small-form d-flex">
-					<input class="small-form__input small-form__input_name" type="text" name="name" placeholder="Введите имя" required>
-					<input class="small-form__input small-form__input_tel" type="text" name="tel" placeholder="Введите телефон" required>
-					<button class="btn small-form__btn">
-						Заказать
-					</button>
-				</form>
+			<form action="success.php" class="small-form d-flex js-form" data-id="popupResult">
+				<input name="id-form" type="text" value=" Узнать точные расценки" hidden>
+				<input class="small-form__input small-form__input_name" type="text" name="name" placeholder="Введите имя" required>
+				<input class="small-form__input small-form__input_tel" type="text" name="tel" placeholder="Введите телефон" required>
+				<button class="btn small-form__btn" data-submit>
+					Заказать
+				</button>
+			</form>
 		</div>
 	</section>
 	<section class="feedback">
@@ -423,21 +441,20 @@
 				</div>
 			</div>
 			<div class="contacts__connection">
-				<form action="#" class="connection">
+				<form action="success.php" class="connection js-form" data-id="popupResult">
 					<h4 class="connection__title">Заполните форму</h4>
 					<p class="connection__info">Для получеия подробной информации</p>
-					<label>
-						<input type="text" placeholder="Введите имя" class="connection__get connection__get_name">
+					<input name="id-form" type="text" value="Форма для получеия подробной информации" hidden>
+					<label class="form__label">
+						<input name="name" type="text" placeholder="Введите имя" class="connection__get connection__get_name">
 					</label>
-					<label>
-						<input type="text" placeholder="Введите телефон" class="connection__get connection__get_number">
+					<label class="form__label">
+						<input name="tel" type="text" placeholder="Введите телефон" class="connection__get connection__get_number">
 					</label>
-					<label>
-						<input type="text" placeholder="Введите E-mail" class="connection__get connection__get_e-mail">
+					<label class="form__label">
+						<input name="email" type="text" placeholder="Введите E-mail" class="connection__get connection__get_e-mail">
 					</label>
-					<label>
-						<input type="submit" class="connection__button btn" value="Заказать расчёт">
-					</label>
+					<button class="btn connection__button" data-submit>Заказать расчёт</button>
 				</form>
 			</div>
 		</div>
@@ -455,5 +472,10 @@
 			</a>
 		</div>
 	</footer>
+	<!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <!-- Валидатор для проверки формы на заполненность  -->
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+    <script src="/js/main-new.js"></script>
 </body>
 </html>
