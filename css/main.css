@@ -651,6 +651,7 @@ button:active {
 	-webkit-text-fill-color: transparent;
 	text-fill-color: transparent;
 	font-family: 'Museo Sans Cyrl 900', sans-serif;
+	font-weight: 900;
 }
 
 .excellences__text-block {
@@ -1278,11 +1279,11 @@ button:active {
 }
 
 /*design elements*/
-.elements__container {
+/*.elements__container {
 	padding-left: 12.7%;
 	padding-top: 22px;
 	padding-right: 50px;
-	padding: 22px 50px 35px 244px; /*244px => 12.7%*/
+	padding: 22px 50px 35px 244px; 
 	background: rgba(0, 0, 0, 0.7);
 }
 
@@ -1332,7 +1333,7 @@ button:active {
 	height: 750px;
 	width: 860px;
 	z-index: 0;
-}
+}*/
 
 /*acctive from design section*/
 
@@ -2242,6 +2243,89 @@ button:active {
 
 	.preview__right-button {
 		left: 57%;
+	}
+
+
+	/*skills*/
+
+	.excellences__skills {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	.excellences__skill_experience {
+		margin-right: 110px;
+	}
+
+	/*small form*/
+
+	.master {
+		background-position: -135% 0%;
+		background-size: 122%;
+	}
+
+	.small-form {
+		flex-direction: column;
+		/*align-items: center;*/
+		width: 100%;
+	}
+
+	.master__title {
+		font-size: 21px;
+		margin-bottom: 40px;
+	}
+
+	.master__wrap {
+		max-width: 375px;
+	}
+
+	.small-form__input_tel {
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+
+	/*materials*/
+	/*design*/
+
+	.design__image {
+		top: 130px;
+	}
+
+	.materials__list {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.materials__name {
+		margin-top: 50px;
+	}
+
+	.elements__container {
+		padding-left: 100px;
+	}
+
+	.design__elements {
+		padding-right: 75px;
+	}
+
+
+	.contacts__data {
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.contacts__data_title {
+		margin-right: 40px;
+	}
+
+	.contacts__location {
+		margin-top: 65px;
+	}
+
+	/*footer*/
+
+	.footer__tel {
+		margin-right: 40px;
 	}
 }
 
