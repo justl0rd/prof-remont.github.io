@@ -2151,6 +2151,12 @@ button:active {
 
 /* 768 - 992 px */
 @media screen and (max-width: 992px) {
+
+	.feedback__container::before,
+	.feedback__container::after {
+    	width: 100%;
+	}
+
 	.container {
 		max-width: 580px;
 	}
@@ -2335,6 +2341,7 @@ button:active {
 	
 	.container {
 		max-width: 540px;
+		width: 100%;
 	}
 
 	/*header*/
@@ -2343,9 +2350,15 @@ button:active {
 		background-position: 0% 100%;
 	}
 
+	.header__info {
+		text-align: center;
+		padding-top: 30px;
+	}
+
 	.header__title {
 		font-size: 34px;
 		max-width: 480px;
+		width: 100%;
 	}
 
 	.header__text {
@@ -2355,6 +2368,14 @@ button:active {
 
 	.header__text::before {
 		top: 5px;
+	}
+
+	.header__btn {
+		margin: 0 auto;
+	}
+
+	.header__location {
+		text-align: left;
 	}
 
 	/*projects*/
@@ -2416,12 +2437,89 @@ button:active {
 		display: none;
 	}
 
+	/*master*/
+
+	.master {
+		background-size: 127%;
+		background-position: -110% 0%;
+	}
+
+	.master__wrap {
+		padding: 30px 0 195px 0;
+		max-width: 425px;
+	}
+
+	/*materials*/
+
+	.materials {
+		padding: 0;
+	}
+
+	.materials__text {
+		margin-bottom: 30px;
+	}
+
+	.materials__list {
+		flex-direction: column;
+	}
+
+	
+	/*feedback*/
+
+
+	.feedback__container {
+		padding-top: 210px;
+	}
+
+	.feedback__reviews {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: auto;
+	}
+
+	.feedback__text {
+		margin: 0;
+		padding: 0;
+		display: block;
+		width: 100%;
+		/*overflow: hidden;*/
+		height: 100%;
+	}
+
+	.feedback__persons-comment {
+		display: block;
+		width: 100%;
+	}
+
+	.feedback__persons-name {
+		margin-top: 35px;
+	}
+
+	.feedback__pointers_wrapper {
+		position: relative;
+	}
+
 	/*offers*/
 
 	.offers {
 		padding-bottom: 55px;
 	}
 
+	/*excellences*/
+
+	.excellences__skill {
+		padding-left: 55px;
+	}
+
+	.excellences__skill::before {
+		left: 0;
+	}
+
+	.feedback__info {
+		max-height: 225px;
+		max-width: 255px;
+	}
 
 	/*design*/
 
@@ -2439,6 +2537,43 @@ button:active {
 
 	.design__elements_art {
 		padding-right: 30px;
+	}
+
+	[data-element="chick-active"] {
+		display: none;
+	}
+
+	.design__image {
+		/*height: 200px;*/
+		/*width: 500px;*/
+		/*background-size: 50%;*/
+		/*z-index: 50000;*/
+		/*background: url(../img/couch.png);*/
+		/*background-position: left;*/
+	}
+
+	/*contacts*/
+
+	.contacts__data {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.contacts__location,
+	.contacts__mail {
+		margin: 0;
+	}
+
+	.footer__container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.footer__logo,
+	.footer__logo-text,
+	.footer__tel {
+		margin: 0;
 	}
 
 }
