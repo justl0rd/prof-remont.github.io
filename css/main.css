@@ -1194,6 +1194,7 @@ button:active {
 .feedback__persons-comment {
 	font-size: 17px;
 	color: #414141;
+	overflow: hidden;
 }
 
 /*buttons*/
@@ -2332,6 +2333,114 @@ button:active {
 /* 576 - 768 px */
 @media screen and (max-width: 768px) {
 	
+	.container {
+		max-width: 540px;
+	}
+
+	/*header*/
+
+	.header {
+		background-position: 0% 100%;
+	}
+
+	.header__title {
+		font-size: 34px;
+		max-width: 480px;
+	}
+
+	.header__text {
+		font-size: 11px;
+		width: auto;
+	}
+
+	.header__text::before {
+		top: 5px;
+	}
+
+	/*projects*/
+	
+	.projects {
+		padding-top: 55px;
+		padding-bottom: 60px;
+	}
+
+	.projects__room-slider {
+		position: relative;
+		max-width: 410px;
+		margin: 0 auto;
+	}
+
+	.projects__tile {
+		flex-basis: 710px;
+	}
+
+	.projects__info_wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.projects__info {
+		max-width: 333px;
+		max-height: 200px;
+	}
+
+	.projects__image_small {
+		width: 220px;
+		height: 195px;
+		position: absolute;
+		top: 215px;
+		left: 0;
+	}
+
+	.projects__image_large {
+		position: relative;
+		top: 90px;
+		max-width: 410px;
+	}
+
+	.price-card__image {
+		display: block;
+		height: 195px;
+		width: 155px;
+		position: absolute;
+		top: 215px;
+		right: 0;
+	}
+
+	.price-card__button {
+		position: relative;
+		top: -30px;
+	}
+
+	.projects__button {
+		display: none;
+	}
+
+	/*offers*/
+
+	.offers {
+		padding-bottom: 55px;
+	}
+
+
+	/*design*/
+
+	.materials__name {
+		margin-top: 50px;
+	}
+
+	.elements__container {
+		padding-left: 20px;
+	}
+
+	.design__elements {
+		margin-top: 40px;
+	}
+
+	.design__elements_art {
+		padding-right: 30px;
+	}
+
 }
 
 /* 320 - 576 px */
