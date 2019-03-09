@@ -2044,7 +2044,107 @@ button:active {
 
 /* 992 - 1200 px */
 @media screen and (max-width: 1200px) {
+	
+	.container {
+		max-width: 960px;
+	}
 
+	.header {
+		padding-bottom: 500px;
+		background-position: 100% 100%;
+	}
+
+	.header__location {
+		margin-top: 90px;
+	}
+
+	.projects__room-slider {
+		flex-direction: column;
+		padding: 0 30px;	
+	}
+
+	.price-card__image {
+		display: none;
+	}
+
+	.projects__info_wrapper {
+		flex-basis: 100%;
+	}
+
+	.projects__image_large {
+		width: 100%;	
+	}
+
+	.projects__price-card {
+		padding-left: 0;
+		flex-basis: 100px;
+	}
+
+	.price-card__button {
+		margin-top: 15px;
+	}
+
+	.projects__left-button {
+		left: -10px;	
+	}
+
+	.projects__right-button {
+		right: -10px;	
+	}
+
+	/*excellences*/
+	.excellences__texts {
+		flex-wrap: wrap;
+	}
+
+	.excellences__skills {
+		padding: 0;
+	}
+
+	.excellences__skill {
+		margin-top: 60px;
+	}
+	
+	/*contacts*/
+
+	.contacts__container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contacts__content {
+		flex-basis: 0;
+	}
+
+	.contacts__title {
+		margin-left: 120px;
+	}
+
+	.contacts__data {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.contacts__mail {
+		margin: 0 40px;
+	}
+
+	.contacts__connection {
+		margin-top: 40px;
+	}
+
+	.connection {
+		max-width: 460px;
+		margin: 0 auto;
+	}
+
+	/*footer*/
+
+	.footer__tel {
+		margin-right: 10%;
+	}
 }
 
 /* 768 - 992 px */
