@@ -2147,6 +2147,21 @@ button:active {
 	.footer__tel {
 		margin-right: 10%;
 	}
+
+	/*credit*/
+
+	.credit {
+		margin-top: 130px;
+	}
+
+	.credit__title {
+		margin-bottom: 70px;
+		text-transform: uppercase;
+		font-size: 40px;
+    	font-family: 'Museo Sans Cyrl 900', sans-serif;
+    	line-height: 1.2em;
+	    max-width: 946px;
+	}
 }
 
 /* 768 - 992 px */
@@ -2581,6 +2596,24 @@ button:active {
 /* 320 - 576 px */
 @media screen and (max-width: 576px) {
 	
+	.container {
+		padding: 0 15px;
+	}
+
+	.offers__card {
+		margin: 10px auto;
+	}
+
+	.materials__text {
+		width: 70%;
+	}
 }
 
 /* Media Queries End
+
+
+to fix
+
+cards
+word 'proffesional'
+walls
