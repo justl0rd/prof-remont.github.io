@@ -176,6 +176,7 @@ button:active {
 
 .title-small {
 	font-size: 28px;
+	line-height: 1.2em;
 	display: block;
 	text-transform: none;
 	font-family: 'Museo Sans Cyrl 700', sans-serif;
@@ -1158,6 +1159,7 @@ button:active {
 .feedback__date {
 	color: #414141;
 	font-size: 17px;
+	opacity: 0.5;
 }
 
 /*comment*/
@@ -1487,6 +1489,7 @@ button:active {
 
 .connection__get {
 	display: block;
+	opacity: 0.5;
 	margin-bottom: 45px;
 	padding-bottom: 10px;
 	border: 0;
@@ -1589,15 +1592,15 @@ button:active {
 
 .job-types {
 	display: none;
-	padding: 77px 70px 135px 60px;
-	max-width: 600px;
-	background-color: rgb(255, 255, 255);
-	box-shadow: 0px 0px 27px 0px rgba(0, 1, 5, 0.08);
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 4;
+    padding: 77px 60px 100px 60px;
+    width: 550px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 27px 0px rgba(0, 1, 5, 0.08);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
 }
 
 .job-types__discover {
@@ -1626,7 +1629,7 @@ button:active {
 
 .job-types__get-data label {
 	display: block;
-	width: 240px;;
+	width: 230px;
 }
 
 .job-types__get-number {
@@ -1639,19 +1642,19 @@ button:active {
 }
 
 .job-types__button {
-	border-width: 1px;
-	border-color: rgb(102, 102, 102);
-	border-style: solid;
-	padding: 15px 20px;
-	background: #fff;
-	text-transform: uppercase;
-	font-size: 17px;
-	color: rgb(102, 102, 102);
-	font-family: "Museo Sans Cyrl 700";
-	margin-left: 15px;
-	display: block;
-	cursor: pointer;
-	transition: .6s;
+    border-width: 1px;
+    border-color: rgb(102, 102, 102);
+    border-style: solid;
+    padding: 15px 15px;
+    background: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: rgb(102, 102, 102);
+    font-family: "Museo Sans Cyrl 700";
+    margin-left: 15px;
+    display: block;
+    cursor: pointer;
+    transition: .6s;
 }
 
 .job-types_open {
@@ -2051,16 +2054,48 @@ input.valid {
 
 /* 768 - 992 px */
 @media screen and (max-width: 992px) {
-
-	.feedback__container::before,
-	.feedback__container::after {
-    	width: 100%;
-	}
-
 	.container {
 		max-width: 580px;
 	}
-
+	.feedback {
+		background: none;
+	}
+	.feedback__container {
+	    max-width: 100%;
+	    padding: 200px 100px 100px;
+	}
+	.feedback__container::before,
+	.feedback__container::after {
+    	width: 100%;
+    	margin-left: 0;
+	}
+	.feedback::before {
+	    background: url(../img/figure.png) no-repeat left top;
+	}
+	.feedback__container::before {
+	    background: url(../img/feedback-blur.png) no-repeat center center / 230%;
+	}
+	.feedback__reviews {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.feedback__info {
+		margin-right: auto;
+		margin-bottom: 20px;
+		max-width: 270px;
+	}
+	.feedback__text {
+		margin-left: 0;
+	}
+	.feedback__persons-comment {
+	    width: 100%;
+	}
+	.feedback__pointers_wrapper {
+		margin-left: 20px;
+	}
 	/*header*/
 	.header__links {
 		flex-direction: column;
@@ -2204,7 +2239,7 @@ input.valid {
 	}
 
 	.materials__name {
-		margin-top: 50px;
+		margin-bottom: 50px;
 	}
 
 	.elements__container {
@@ -2238,53 +2273,41 @@ input.valid {
 
 /* 576 - 768 px */
 @media screen and (max-width: 768px) {
-	
 	.container {
 		max-width: 540px;
 		width: 100%;
 	}
-
 	/*header*/
-
 	.header {
 		background-position: 0% 100%;
 	}
-
 	.header__info {
 		text-align: center;
 		padding-top: 30px;
 	}
-
 	.header__title {
 		font-size: 34px;
 		max-width: 480px;
 		width: 100%;
 	}
-
 	.header__text {
-		font-size: 11px;
 		width: auto;
 	}
-
 	.header__text::before {
-		top: 5px;
+	    top: 15px;
+	    left: -80px;
 	}
-
 	.header__btn {
 		margin: 0 auto;
 	}
-
 	.header__location {
 		text-align: left;
 	}
-
 	/*projects*/
-	
 	.projects {
 		padding-top: 55px;
 		padding-bottom: 60px;
 	}
-
 	.projects__room-slider {
 		position: relative;
 		max-width: 410px;
@@ -2294,17 +2317,14 @@ input.valid {
 	.projects__tile {
 		flex-basis: 710px;
 	}
-
 	.projects__info_wrapper {
 		flex-direction: column;
 		align-items: center;
 	}
-
 	.projects__info {
 		max-width: 333px;
 		max-height: 200px;
 	}
-
 	.projects__image_small {
 		width: 220px;
 		height: 195px;
@@ -2312,13 +2332,11 @@ input.valid {
 		top: 215px;
 		left: 0;
 	}
-
 	.projects__image_large {
 		position: relative;
 		top: 90px;
 		max-width: 410px;
 	}
-
 	.price-card__image {
 		display: block;
 		height: 195px;
@@ -2327,57 +2345,45 @@ input.valid {
 		top: 215px;
 		right: 0;
 	}
-
 	.price-card__button {
 		position: relative;
 		top: -30px;
 	}
-
 	.projects__button {
 		display: none;
 	}
-
 	/*master*/
-
 	.master {
 		background-size: 127%;
 		background-position: -110% 0%;
 	}
-
 	.master__wrap {
-		padding: 30px 0 195px 0;
-		max-width: 425px;
+		padding: 30px 0 100px 0;
 	}
-
 	/*materials*/
-
 	.materials {
-		padding: 0;
+	    background: url(../img/materials.png) no-repeat top 80% right -80px / 350px;
 	}
-
 	.materials__text {
 		margin-bottom: 30px;
 	}
-
 	.materials__list {
 		flex-direction: column;
 	}
-
-	
 	/*feedback*/
-
-
 	.feedback__container {
-		padding-top: 210px;
+		padding-top: 100px;
+		max-width: 100%;
 	}
-
+	.feedback__container::before {
+	    background: url(../img/feedback-blur.png) no-repeat left 30% top 35% / 600%;
+	}
 	.feedback__reviews {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		height: auto;
 	}
-
 	.feedback__text {
 		margin: 0;
 		padding: 0;
@@ -2386,101 +2392,361 @@ input.valid {
 		/*overflow: hidden;*/
 		height: 100%;
 	}
-
 	.feedback__persons-comment {
 		display: block;
 		width: 100%;
 	}
-
 	.feedback__persons-name {
 		margin-top: 35px;
 	}
-
 	.feedback__pointers_wrapper {
 		position: relative;
 	}
-
 	/*offers*/
-
 	.offers {
 		padding-bottom: 55px;
 	}
-
 	/*excellences*/
-
 	.excellences__skill {
 		padding-left: 55px;
 	}
-
 	.excellences__skill::before {
 		left: 0;
 	}
-
 	.feedback__info {
-		max-height: 225px;
+		max-height: 250px;
 		max-width: 255px;
 	}
-
 	/*design*/
-
 	.materials__name {
-		margin-top: 50px;
+		margin-bottom: 50px;
 	}
-
 	.elements__container {
 		padding-left: 20px;
 	}
-
 	.design__elements {
 		margin-top: 40px;
 	}
-
 	.design__elements_art {
 		padding-right: 30px;
 	}
-
 	[data-element="chick-active"] {
 		display: none;
 	}
-
 	.design__image {
-		/*height: 200px;*/
-		/*width: 500px;*/
-		/*background-size: 50%;*/
-		/*z-index: 50000;*/
-		/*background: url(../img/couch.png);*/
-		/*background-position: left;*/
+		top: 240px;
+		background: url(../img/couch.png) right -340px center no-repeat;
+		-webkit-background-size: 50%;
+		background-size: 50%;
 	}
-
 	/*contacts*/
-
 	.contacts__data {
 		flex-direction: column;
 		align-items: flex-start;
 	}
-
+	.contacts__title {
+		margin-left: 0;
+	}
+	.contacts__container {
+		padding-bottom: 100px;
+	}
 	.contacts__location,
 	.contacts__mail {
 		margin: 0;
 	}
-
+	.footer {
+    	padding: 80px 0 60px;
+	}
 	.footer__container {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
-
+	.footer__copyright {
+		margin: 15px 0;
+	}
 	.footer__logo,
 	.footer__logo-text,
 	.footer__tel {
 		margin: 0;
 	}
-
+	.preview__arias {
+	    flex-basis: 200px;
+	}
+	/*Modal*/
+	.job-types {
+		padding: 77px 50px 70px 50px;
+    	width: 530px;
+	}
 }
 
 /* 320 - 576 px */
 @media screen and (max-width: 576px) {
-	
+	.container {
+		max-width: 100%;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+	h2 {
+		font-size: 30px;
+		line-height: 2em;
+	}
+	h5 {
+		font-size: 17px;
+	}
+	.title-small {
+		font-size: 20px;
+		line-height: 1.2em;
+	}
+	/*header*/
+
+	.header {
+		padding-bottom: 450px;
+		padding-top: 50px;
+	    background: url(../img/header-img.jpg) no-repeat right bottom / 560px;
+	}
+	.header__navigation {
+		-webkit-flex-wrap: wrap;
+		-moz-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.header__logo {
+		margin: 0 auto 20px;
+	}
+	.header__links {
+		-ms-align-items: center;
+		align-items: center;
+		max-width: 100%;
+	}
+	.header__text {
+	    font-size: 11px;
+	    margin: 37px 0 35px 60px;
+	}
+	.header__text::before {
+	    top: 5px;
+	    left: -70px;
+	    width: 50px;
+	}
+	.header__title-small {
+		font-size: 20px;
+	}
+	.header__tel {
+		font-size: 15px;
+	}
+	.heater__price {
+		margin-top: 5px;
+	}
+	.header__location {
+		margin-top: 50px;
+	}
+	/*projects */
+	.projects  {
+		padding-bottom: 0;
+	}
+	.projects__title  {
+		margin-bottom: 30px;
+	}
+	.projects__location {
+	    margin: 25px 0;
+	}
+
+	/*offers*/
+	.offers__cards {
+		margin-top: 23px;
+	}
+	.offers__card {
+		padding: 40px;
+	}
+	.offers__card-blur {
+	    width: 100%;
+	}
+	.offers__pice {
+		font-size: 16px;
+	}
+	.offers__pice span {
+		font-size: 30px;
+	}
+	.excellences {
+		padding-bottom: 40px;
+	}
+	.excellences__text {
+		font-size: 80px;
+	}
+	.excellences__text-block {
+		font-size: 15px;
+	}
+	.excellences__texts {
+		justify-content: center;
+	}
+	/*preview*/
+	.preview-wrap__title {
+		margin-bottom: 30px;
+	}
+	.preview__images {
+		height: 300px;
+	}
+	.preview__front-image {
+		max-height: 280px;
+	}
+	.preview__back-image {
+		max-height: 240px;
+	}
+	/*offer*/
+	.offer {
+	    padding: 10px 0;
+	}
+	.offer__title {
+		margin-bottom: 60px;
+	}
+	.offer__name {
+		margin-bottom: 20px;
+	}
+	.offer__text  {
+		margin-bottom: 60px;
+		font-size: 15px;
+	}
+	/*Master*/
+	.small-form__input {
+		width: 200px;
+	}
+	.master__wrap {
+		max-width: 240px;
+	    padding: 30px 15px 100px 15px;
+    	margin-left: -15px;
+	}
+	.master {
+	    background-size: 200% !important;
+	    background-position: 15% 0% !important;
+	}
+	/*Stages*/
+	.stages {
+	    padding-top: 55px;
+	}
+	.stages__items {
+		margin-top: 10px;
+	}
+	.stages__item {
+		margin-bottom: 15px;
+	}
+	.stages__text {
+		width: 80%;
+	}
+	/*Materials*/
+	.materials {
+		padding: 0 0 30px;
+		background: none;
+	}
+	.materials__text {
+		width: 70%;
+	}
+	.materials__text::before {
+		width: 50px;
+	}
+	.materials__name {
+		margin: 0 0 20px;
+	}
+	.materials__price {
+	    font-size: 20px;
+	    margin: 20px 0 10px;
+	}
+	.small-form__input_tel {
+		margin: 0 0 30px;
+	}
+	/*Feedback*/
+	.feedback__title {
+		padding-top: 90px;
+	}
+	.feedback__reviews {
+		margin-top: 35px;
+	}
+	.feedback__wrapper {
+		padding-bottom: 50px;
+	}
+	/*Contact*/
+	.contacts {
+		margin-top: 0;
+		padding: 50px 0;
+	}
+	.contacts__data {
+		margin-top: 10px;
+	}
+	.contacts__data_title {
+		margin-bottom: 5px;
+	}
+	.contacts__mail, .contacts__call, .contacts__location {
+		flex-basis: 80px;
+	}
+	.connection__title {
+		font-size: 25px;
+	}
+	.connection {
+	    max-width: 400px;
+	    margin: 0 15px;
+	    padding: 50px 40px;
+	}
+	.connection__get {
+		margin-bottom: 30px;
+	}
+	.connection__button  {
+		padding: 15px 0;
+	}
+	/*Design*/
+	.design {
+		padding: 50px 0 0;
+	}
+	.design__image {
+		display: none;
+	}
+	.design__demo-section {
+		width: 100%;
+		margin-top: 0;
+	}
+	.design__elements {
+		width: 90%;
+		padding-right: 10%;
+	}
+	.design__elements_style {
+		width: 80%;
+	}
+	.elements__item {
+		font-size: 10px;
+	}
+	.elements__item:not(:first-child) {
+		margin-left: 20px;
+	}
+	/*Modal*/
+	.job-types {
+		padding: 20px;
+    	width: 90%;
+	}
+	.job-types__get-data {
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+	.job-types__button {
+		width: 230px;
+		margin: 0 auto;
+	}
+	.job-types__get-data label {
+		margin: 0 auto 30px;
+	}
+	.job-types__title {
+	    margin-left: 55px;
+	    margin-top: 30px;
+	}
+	.job-types__value {
+		top: 50px;
+    	left: 20px;
+	}
+	.job-types__discover {
+	    margin-top: 50px;
+	    margin-bottom: 15px;
+	}
 }
 
 /* Media Queries End
