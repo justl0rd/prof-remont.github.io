@@ -730,7 +730,7 @@ button:active {
 }
 
 .preview__right-button {
-	left: 74%;
+	left: -90px;
 	background: url(../img/icons.png) no-repeat right -21px top;
 	position: absolute;
 	top: 48%;
@@ -745,6 +745,7 @@ button:active {
 
 .preview__arias {
 	flex-basis: 340px;
+	position: relative;
 }
 .preview__area {
 	display: block;
@@ -1226,6 +1227,20 @@ button:active {
 	outline: 7px solid #6fcdd4;
 }
 /*Feedback End*/
+/*Credit Start*/
+  .credit {
+    padding-top: 130px;
+  }
+
+  .credit__title {
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    font-size: 40px;
+      font-family: 'Museo Sans Cyrl 900', sans-serif;
+      line-height: 1.2em;
+      max-width: 946px;
+  }
+/*Credit End*/
 /*Design Start*/
 
 .design {
@@ -1320,9 +1335,37 @@ button:active {
 	background-size: cover;
 }
 
+.design__elements_art .elements__container {
+	background: rgba(112, 81, 60, 0.9) url(../img/mask.png) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
 .design__elements_art {
 	padding-right: 150px;
 	background: url(../img/design/design-3.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.furniture-active-sm {
+	background: rgba(177, 178, 160, 0.9) url(../img/mask.png) no-repeat center center !important;
+	-webkit-background-size: cover !important;
+	background-size: cover !important;
+}
+
+.furniture-active-lg {
+	background: url(../img/design/furniture.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+.chick-active-sm {
+	background: rgba(255, 238, 209, 0.9) url(../img/mask.png) no-repeat center center !important;
+	-webkit-background-size: cover !important;
+	background-size: cover !important;
+}
+
+.chick-active-lg {
+	background: url(../img/design/lux.jpg) center center no-repeat;
 	background-size: cover;
 }
 
@@ -1405,7 +1448,7 @@ button:active {
 
 .contacts__data_title {
 	margin-bottom: 25px;
-	font-size: 22px;
+	font-size: 21px;
 	font-family: "Museo Sans Cyrl 700";
 	color: rgba(65, 65, 65, 0.702);
 }
@@ -1639,6 +1682,7 @@ button:active {
 	border-bottom: 1px solid rgb(102, 102, 102);
 	color: rgba(65, 65, 65, 0.502);
 	font-family: "Museo Sans Cyrl 700";
+	width: 180px;
 }
 
 .job-types__button {
@@ -1687,7 +1731,7 @@ label.error {
     font-size: 12px;
     color: red;
     position: absolute;
-    top: -45px;
+    top: 45px;
     left: 0;
     width: 240px;
 }
@@ -1872,6 +1916,9 @@ input.valid {
 	.design__image {
 		background: url(../img/couch.png) right -360px center no-repeat;
 	}
+	.preview__right-button {
+		left: -30px;
+	}
 }
 /* 1200 - 1500 px */
 @media screen and (max-width: 1500px) {
@@ -1905,9 +1952,6 @@ input.valid {
 	.preview__back-image {
 	    width: 92%;
 	    height: 575px;
-	}
-	.preview__right-button {
-		left: 78%;
 	}
 	.preview__arias {
     	flex-basis: 280px;
@@ -1944,6 +1988,9 @@ input.valid {
 	}
 	.contacts__location::before {
 		left: 5px;
+	}
+	.preview__right-button {
+		left: -20px;
 	}
 }
 
@@ -2183,11 +2230,6 @@ input.valid {
 		margin-left: 40px;
 	}
 
-	.preview__right-button {
-		left: 57%;
-	}
-
-
 	/*skills*/
 
 	.excellences__skills {
@@ -2221,9 +2263,13 @@ input.valid {
 		max-width: 375px;
 	}
 
+	.master__wrap label.error {
+		top: 35px;
+
+	}
+
 	.small-form__input_tel {
-		margin-top: 40px;
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 	}
 
 	/*materials*/
@@ -2315,7 +2361,7 @@ input.valid {
 	}
 
 	.projects__tile {
-		flex-basis: 710px;
+		flex-basis: 750px;
 	}
 	.projects__info_wrapper {
 		flex-direction: column;
@@ -2334,7 +2380,7 @@ input.valid {
 	}
 	.projects__image_large {
 		position: relative;
-		top: 90px;
+		top: 70px;
 		max-width: 410px;
 	}
 	.price-card__image {
@@ -2348,6 +2394,7 @@ input.valid {
 	.price-card__button {
 		position: relative;
 		top: -30px;
+		margin-top: 30px;
 	}
 	.projects__button {
 		display: none;
@@ -2478,6 +2525,25 @@ input.valid {
 		padding: 77px 50px 70px 50px;
     	width: 530px;
 	}
+	/*Credit*/
+	.credit {
+		padding-top: 80px;
+	}
+	.credit__title {
+		font-size: 27px;
+		margin-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 435px) {
+
+  .projects__image_small {
+    width: 50%;
+  }
+
+  .price-card__image {
+    width: 45%;
+  }
 }
 
 /* 320 - 576 px */
@@ -2543,13 +2609,16 @@ input.valid {
 	}
 	/*projects */
 	.projects  {
-		padding-bottom: 0;
+		padding-bottom: 20px;
 	}
 	.projects__title  {
 		margin-bottom: 30px;
 	}
 	.projects__location {
 	    margin: 25px 0;
+	}
+	.projects__image_large {
+		top: 80px;
 	}
 
 	/*offers*/
@@ -2663,6 +2732,14 @@ input.valid {
 	}
 	.feedback__wrapper {
 		padding-bottom: 50px;
+	}
+	/*Credit*/
+	.credit {
+		padding-top: 50px;
+	}
+	.credit__title {
+		font-size: 17px;
+		margin-bottom: 10px;
 	}
 	/*Contact*/
 	.contacts {

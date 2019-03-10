@@ -4,6 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ПРОФ-РЕМОНТ</title>
+	<meta name="description" content="ПРОФ-РЕМОНТ - профессиональный ремонт квартир в Москве">
+	<meta name="keywords" content="ПРОФ-РЕМОНТ, ременот, ремонт квартир, ремонт квартир в Москве, Ремонт в Москве">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="img/favicon/favicon-192.png">
+	<!-- OG Tags -->
+	<meta property="og:title" content="ПРОФ-РЕМОНТ">
+	<meta property="og:description" content="ПРОФ-РЕМОНТ - профессиональный ремонт квартир в Москве">
+	<meta property="og:type" content="article">
+	<meta property="og:image" content="#" >
+	<meta property="og:site_name" content="ПРОФ-РЕМОНТ">
+	<!-- Chrome, Firefox OS and Opera -->
+ 	<meta name="theme-color" content="#f2f2f5">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#f2f2f5">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#f2f2f5">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="js/main.js" defer></script>
@@ -12,16 +29,17 @@
 	<script src="js/feedback-slider.js" defer></script>
 	<script src="js/addActiveClass.js" defer></script>
 	<script src="js/modal-buy.js" defer></script>
+	<script src="js/scroll.js" defer></script>
 </head>
 <body>
 	<header class="header" id="header">
 		<div class="container">
 			<nav class="header__navigation d-flex">
-				<a href="#" class="header__logo">
+				<a href="index.html" class="header__logo">
 					Проф-Ремонт
 				</a>
 				<div class="header__links d-flex">
-					<a href="#" class="heater__price">
+					<a href="#offers" class="heater__price goto">
 						Узнать цены
 					</a>
 					<a href="tel:+84956468240" class="header__tel">
@@ -42,7 +60,7 @@
 				<p class="header__text">
 					Вызов мастера для рассчёта стоимости - бесплатно!
 				</p>
-				<a href="#master" class="header__btn btn">
+				<a href="#master" class="header__btn btn goto">
 					Заказать мастера
 				</a>
 				<p class="header__location">
@@ -178,7 +196,6 @@
 			</h2>
 		</div>
 		<div class="preview" id="preview">
-			<button class="preview__right-button"></button>
 		</div>
 	</section>
 
@@ -234,8 +251,12 @@
 				</h2>
 				<form action="success.php" class="small-form d-flex js-form" data-id="popupResult">
 					<input name="id-form" type="text" value=" Вызов мастера для расчёта стоимости" hidden>
-					<input class="small-form__input small-form__input_name" type="text" name="name" placeholder="Введите имя" required>
-					<input class="small-form__input small-form__input_tel" type="text" name="tel" placeholder="Введите телефон" required>
+					<label class="form__label">
+						<input class="small-form__input small-form__input_name" type="text" name="name" placeholder="Введите имя" required>
+					</label>
+					<label class="form__label">
+						<input class="small-form__input small-form__input_tel" type="text" name="tel" placeholder="Введите телефон" required>
+					</label>
 					<button class="btn small-form__btn" data-submit>
 						Заказать
 					</button>
@@ -359,6 +380,21 @@
 			<div class="feedback__wrapper" id="feedback__slider"></div>
 		</div>
 	</section>
+	<section class="credit" id="credit">
+	    <div class="container">
+	    	<h3 class="credit__title">
+	        	Получите беспроцентную рассрочку на 12 месяцев
+	    	</h3>
+	    	<form  action="success.php" class="small-form d-flex js-form" data-id="popupResult">
+	    		<input name="id-form" type="text" value=" Получите беспроцентную рассрочку на 12 месяцев" hidden>
+		    	<input class="small-form__input small-form__input_name" type="text" name="name" placeholder="Введите имя" required>
+		    	<input class="small-form__input small-form__input_tel" type="text" name="tel" placeholder="Введите телефон" required>
+		        <button class="btn small-form__btn" data-submit>
+		        	Заказать
+		        </button>
+	    	</form>
+	    </div>
+	</section>
 	<section class="design" id="design">
 		<div class="container">
 			<h2 class="design__title">
@@ -417,17 +453,17 @@
 						<h5 class="contacts__data_title">
 							Позвоните нам
 						</h5>
-						<p class="contacts__data_info">
-							+79205420316
-						</p>
+						<a href="tel:+84956468240" class="contacts__data_info">
+							+84956468240
+						</a>
 					</div>
 					<div class="contacts__mail">
 						<h5 class="contacts__data_title">
 							Напишите нам
 						</h5>
-						<p class="contacts__data_info">
+						<a href="mailto:Sashaka7096@gmail.com" class="contacts__data_info">
 							Sashaka7096@gmail.com
-						</p>
+						</a>
 					</div>
 					<div class="contacts__location">
 						<h5 class="contacts__data_title">
@@ -441,7 +477,7 @@
 				</div>
 			</div>
 			<div class="contacts__connection">
-				<form action="success.php" class="connection js-form" data-id="popupResult">
+				<form id="form-info" action="success.php" class="connection js-form" data-id="popupResult">
 					<h4 class="connection__title">Заполните форму</h4>
 					<p class="connection__info">Для получеия подробной информации</p>
 					<input name="id-form" type="text" value="Форма для получеия подробной информации" hidden>
@@ -487,6 +523,6 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <!-- Валидатор для проверки формы на заполненность  -->
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
-    <script src="js/main-new.js"></script>
+    <script src="js/forms-configs.js"></script>
 </body>
 </html>

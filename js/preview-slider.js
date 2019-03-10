@@ -53,7 +53,8 @@ class PreviewSlider {
 	render(container) {
 		const {data, currentSlide} = this.props,
 			galleryContainer = this.createElement('div', 'preview__images'),
-			previewAreas = this.createElement('div', 'preview__arias');
+			previewAreas = this.createElement('div', 'preview__arias'),
+			button = this.createElement('button', 'preview__right-button');
 
 		data.forEach(el => {
 			const areaEl = this.createElement('span', 'preview__area', [{'data-image-id': el.id}]);
@@ -61,7 +62,7 @@ class PreviewSlider {
 			previewAreas.append(areaEl);
 		});
 
-		galleryContainer.append();
+		previewAreas.append(button);
 		container.append(galleryContainer, previewAreas);
 
 		this.renderGallery(galleryContainer, currentSlide);

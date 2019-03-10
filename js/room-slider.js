@@ -7,19 +7,19 @@ const roomDataToShow = [
 		square: '16 м<sup>2</sup>',
 		images: {
 			smallImage: {
-				alt: '#', // attribute name
+				alt: 'Душевая', // attribute name
 				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
-				alt: '#',
+				alt: 'Ванная комната',
 				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
-				alt: '#',
+				alt: 'Умывальник',
 				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
-		link: '#'
+		href: '#form-info'
 	},
 	{
 		title: 'Супер ремонт',
@@ -27,19 +27,19 @@ const roomDataToShow = [
 		square: '100 м<sup>2</sup>',
 		images: {
 			smallImage: {
-				alt: '#', // attribute name
+				alt: 'Душевая', // attribute name
 				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
-				alt: '#',
+				alt: 'Ванная комната',
 				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
-				alt: '#',
+				alt: 'Умывальник',
 				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
-		link: '#'
+		href: '#form-info'
 	},
 	{
 		title: 'Просто ремонт',
@@ -47,19 +47,19 @@ const roomDataToShow = [
 		square: '24 м<sup>2</sup>',
 		images: {
 			smallImage: {
-				alt: '#', // attribute name
+				alt: 'Душевая', // attribute name
 				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
 			},
 			largeImage: {
-				alt: '#',
+				alt: 'Ванная комната',
 				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
 			},
 			cardImage: {
-				alt: '#',
+				alt: 'Умывальник',
 				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
 			}
 		},
-		link: '#'
+		href: '#form-info'
 	}
 ];
 
@@ -109,7 +109,7 @@ class RoomSlider {
 	}
 
 	renderSlide(container, idx) {
-		const {images, link, location, square, title} = this.props.data[idx];
+		const {images, href, location, square, title} = this.props.data[idx];
 
 		container.innerText = '';
 
@@ -123,7 +123,7 @@ class RoomSlider {
 			largeImage = this.createElement('img', 'projects__image_large', [images.largeImage]),
 			priceCard = this.createElement('div', 'projects__price-card'),
 			priceImage = this.createElement('img', 'price-card__image', [images.cardImage]),
-			buttonlink = this.createElement('a', 'price-card__button btn', [{link}]);
+			buttonlink = this.createElement('a', 'price-card__button btn goto', [{href}]);
 
 		titleInfo.innerText = title;
 		locationInfo.innerText = location;
