@@ -2775,6 +2775,7 @@ input.valid {
 	}
 	.design__image {
 		display: none;
+		background: none;
 	}
 	.design__demo-section {
 		width: 100%;
