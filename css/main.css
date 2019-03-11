@@ -2495,9 +2495,6 @@ input.valid {
 		top: -30px;
 		margin-top: 30px;
 	}
-	.projects__button {
-		display: none;
-	}
 	/*master*/
 	.master {
 		background-size: 127%;
@@ -2634,17 +2631,6 @@ input.valid {
 	}
 }
 
-@media screen and (max-width: 435px) {
-
-  .projects__image_small {
-    width: 50%;
-  }
-
-  .price-card__image {
-    width: 45%;
-  }
-}
-
 /* 320 - 576 px */
 @media screen and (max-width: 576px) {
 	.container {
@@ -2719,7 +2705,15 @@ input.valid {
 	.projects__image_large {
 		top: 80px;
 	}
-
+	.projects__button {
+		top: 59%;
+	}
+	.projects__left-button {
+		left: -10px;
+	}
+	.projects__right-button {
+		right: -10px;
+	}
 	/*offers*/
 	.offers__cards {
 		margin-top: 23px;
@@ -2924,6 +2918,30 @@ input.valid {
 	    margin-top: 50px;
 	    margin-bottom: 15px;
 	}
+}
+
+@media screen and (max-width: 435px) {
+
+  .projects__image_small {
+    width: 50%;
+  }
+
+  .price-card__image {
+    width: 45%;
+  }
+  .projects__image_large {
+  	max-height: 180px;
+  	top: 70px;
+  }
+  .price-card__button {
+  	top: -80px;
+  }
+  .projects__room-slider {
+  	max-width: 90%;
+  }
+  .projects__tile {
+	flex-basis: 700px;
+  }
 }
 
 /*Media Queries End*/
