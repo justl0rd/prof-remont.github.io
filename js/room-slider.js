@@ -2,6 +2,26 @@
 
 const roomDataToShow = [
 	{
+		title: 'Ремонт кухни',
+		location: 'Тверской р-н',
+		square: '14 м<sup>2</sup>',
+		images: {
+			smallImage: {
+				alt: 'Фото кухни', // attribute name
+				src: 'img/projects/preview/tverskoy-img-1-sm.jpg'
+			},
+			largeImage: {
+				alt: 'Фото кухни',
+				src: 'img/projects/preview/tverskoy-img-3-sm.jpg'
+			},
+			cardImage: {
+				alt: 'Фото кухни',
+				src: 'img/projects/preview/tverskoy-img-2-sm.jpg'
+			}
+		},
+		href: '#form-info'
+	},
+	{
 		title: 'Капитальный ремонт',
 		location: 'Одинцово',
 		square: '16 м<sup>2</sup>',
@@ -22,41 +42,21 @@ const roomDataToShow = [
 		href: '#form-info'
 	},
 	{
-		title: 'Супер ремонт',
-		location: 'Москва',
-		square: '100 м<sup>2</sup>',
+		title: 'Ремонт кухни',
+		location: 'Р-Н Якиманка',
+		square: '25 м<sup>2</sup>',
 		images: {
 			smallImage: {
-				alt: 'Душевая', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
+				alt: 'Фото кухни', // attribute name
+				src: 'img/projects/preview/yakimina-img-1-sm.jpg'
 			},
 			largeImage: {
-				alt: 'Ванная комната',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
+				alt: 'Фото кухни',
+				src: 'img/projects/preview/yakimina-img-3-sm.jpg'
 			},
 			cardImage: {
-				alt: 'Умывальник',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
-			}
-		},
-		href: '#form-info'
-	},
-	{
-		title: 'Просто ремонт',
-		location: 'Иваново',
-		square: '24 м<sup>2</sup>',
-		images: {
-			smallImage: {
-				alt: 'Душевая', // attribute name
-				src: 'img/projects/preview/odintsovo-img-1-sm.jpg'
-			},
-			largeImage: {
-				alt: 'Ванная комната',
-				src: 'img/projects/preview/odintsovo-img-3-sm.jpg'
-			},
-			cardImage: {
-				alt: 'Умывальник',
-				src: 'img/projects/preview/odintsovo-img-2-sm.jpg'
+				alt: 'Фото кухни',
+				src: 'img/projects/preview/yakimina-img-2-sm.jpg'
 			}
 		},
 		href: '#form-info'

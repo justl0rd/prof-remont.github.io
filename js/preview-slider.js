@@ -4,31 +4,31 @@ const previewDataToShow = [
 	{
 		id: 0,
 		areaName:'Спальня',
-		path: 'img/preview/0.jpg',
+		path: 'img/preview/00.jpg',
 
 	},
 	{
 		id: 1,
 		areaName:'Коридор',
-		path: 'img/preview/1.jpg',
+		path: 'img/preview/01.jpg',
 
 	},
 	{
 		id: 2,
 		areaName:'Кухня',
-		path: 'img/preview/2.jpg',
+		path: 'img/preview/02.jpg',
 
 	},
 	{
 		id: 3,
 		areaName:'Ванна',
-		path: 'img/preview/3.jpg',
+		path: 'img/preview/03.jpg',
 
 	},
 	{
 		id: 4,
 		areaName:'Балкон',
-		path: 'img/preview/4.jpg',
+		path: 'img/preview/04.jpg',
 
 	}
 ];

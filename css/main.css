@@ -188,12 +188,14 @@ button:active {
 	font-family: 'Museo Sans Cyrl 700', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
-	border: 2px solid transparent;
+	outline: 2px solid transparent;
 	transition: all 0.6s ease;
+	border: none;
+	outline: 2px solid #fe3a26;
 }
 
 .btn:hover {
-	border: 2px solid #fe3a26;
+	outline: 2px solid #fe3a26;
 	background: transparent;
 	color: #fe3a26;
 	cursor: pointer;
@@ -207,6 +209,7 @@ button:active {
 
 .header {
 	padding-top: 70px;
+	animation: bg-fade-r 1s ease;
 	background: url(../img/header-img.jpg) no-repeat right bottom;
 }
 
@@ -331,10 +334,29 @@ button:active {
 }
 
 .header__btn {
+	position: relative;
+	overflow: hidden;
+	border: none;
+	animation: show-btn 1.1s ease;
 	width: 235px;
 	height: 59px;
 	margin-left: 102px;
 	line-height: 59px;
+	outline: none;
+}
+
+.header__btn::before {
+  visibility: hidden;
+  position: absolute;
+  content: '';
+  animation: show-btn-r 3s ease;
+  width: 110%;
+  height: 115%;
+  background: #fff;
+  top: -3px;
+  left: -5px;
+  transform: translateX(160%);
+  animation-delay: 1s;
 }
 
 .header__location {
@@ -350,6 +372,22 @@ button:active {
 	width: 13px;
 	height: 18px;
 	background: url(../img/icons.png) no-repeat left top;
+}
+.delay-1 {
+	animation-delay: 0.9s;
+	animation-duration: 1.5s
+}
+.delay-2 {
+	animation-delay: 1.25s;
+	animation-duration: 1.5s
+}
+.delay-3 {
+	animation-delay: 1.5s;
+	animation-duration: 1.5s
+}
+.delay-4 {
+	animation-delay: 2s;
+	animation-duration: 1.5s
 }
 /*Header End*/
 
@@ -551,6 +589,11 @@ button:active {
 .offers__card {
 	padding: 110px 40px;
 	cursor: pointer;
+	transition: all 0.6s ease;
+}
+
+.offers__card:hover {
+	transform: scale(1.1);
 }
 
 .offers__card_nothing {
@@ -739,7 +782,6 @@ button:active {
 	cursor: pointer;
 	outline: none;
 	border: none;
-	opacity: 0.47;
 	z-index: 3;
 }
 
@@ -1149,6 +1191,19 @@ button:active {
 	padding: 35px 75px 45px 40px;
 	background: #fff;
 	flex-basis: 270px;
+	min-height: 270px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 330px;
 }
 
 .feedback__name {
@@ -1862,6 +1917,49 @@ input.valid {
 	}
 }
 
+@keyframes bg-fade-r {
+
+  0% {
+    background-position: 300% bottom;
+  }
+
+}
+
+@keyframes show-btn-r {
+
+  0% {
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  80% {
+    transform: translateX(-150%);
+  }
+
+  82% {
+    visibility: hidden;
+    transform: translateX(-170%);
+  }
+
+  100% {
+    visibility: hidden;
+  }
+
+}
+
+@keyframes show-btn {
+  0% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes fade-out-left {
 	0% {
@@ -1911,7 +2009,7 @@ input.valid {
 /* 1500 - 1700 px */
 @media screen and (max-width: 1700px) {
 	.header {
-		background: url(../img/header-img.jpg) no-repeat right bottom / 850px;
+		background: url(../img/header-img.jpg) no-repeat right -200px bottom / 1000px;
 	}
 	.design__image {
 		background: url(../img/couch.png) right -360px center no-repeat;
@@ -1937,7 +2035,7 @@ input.valid {
 		margin: 0 50px 50px;
 	}
 	.header {
-		background: url(../img/header-img.jpg) no-repeat right bottom / 650px;
+		background: url(../img/header-img.jpg) no-repeat right -300px bottom / 900px;
 	}
 	.projects__price-card {
 		padding-left: 30px;
@@ -1971,7 +2069,7 @@ input.valid {
 		padding-left: 10px;
 	}
 	.feedback__persons-comment {
-	    width: 600px;
+	    width: 590px;
 	}
 	.design__image {
 		background: url(../img/couch.png) right -650px center no-repeat;
@@ -2003,6 +2101,7 @@ input.valid {
 
 	.header {
 		padding-bottom: 500px;
+		background: url(../img/header-img.jpg) no-repeat center bottom / 650px;
 		background-position: 100% 100%;
 	}
 
@@ -2132,7 +2231,7 @@ input.valid {
 	.feedback__info {
 		margin-right: auto;
 		margin-bottom: 20px;
-		max-width: 270px;
+		max-width: 320px;
 	}
 	.feedback__text {
 		margin-left: 0;
@@ -2461,8 +2560,8 @@ input.valid {
 		left: 0;
 	}
 	.feedback__info {
-		max-height: 250px;
-		max-width: 255px;
+		max-height: 270px;
+		max-width: 300px;
 	}
 	/*design*/
 	.materials__name {
@@ -2827,4 +2926,4 @@ input.valid {
 	}
 }
 
-/* Media Queries End
+/*Media Queries End*/
